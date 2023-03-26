@@ -1,0 +1,110 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --main-color:#333;
+    --black-color:#333;
+    --dark-color-hover:rgb(177, 177, 177);
+    --white-color:rgb(230, 230, 230);
+    --grey-color:#777;
+    --accent-color-hover:orange;
+    --accent-color:rgba(255, 166, 0, 0.863);
+    --index:calc(1vh+1vw);
+}
+body{
+    background-color: var(--main-color); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    color:#fff;
+}
+button{
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    font-size: 20px;
+    cursor: pointer;
+}
+ul, li{
+    list-style: none
+}
+.calc{
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    min-height: 55vh;
+    min-width: 50vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.calc__buttons{
+    background-color: rgba(0, 0, 0, 0.35);
+    padding: 9px;
+    border-radius: 8px;
+    padding-left: auto;
+    padding-right: auto;
+}
+.calc__btn{
+    color:var(--main-color);
+    width: calc(var(--index)*5);
+    height:  calc(var(--index)*5);
+    margin:calc( var(--index)/3.5);
+    border-radius: 50%;
+    background-color: var(--black-color);
+    color: var(--white-color);
+    transition: 0.15s ease-in-out;
+    
+}
+.calc__btn:hover{
+    scale: 1.1;
+    background-color: var(--dark-color-hover);
+}
+.calc__btn-null{
+    width: calc(var(--index)*5*2.2);
+    border-radius: 8px;
+}
+.calc__btn-grey{
+    background-color: var(--grey-color);
+}
+.calc__btn-grey:hover{
+    background-color: var(--dark-color-hover);
+}
+.calc__btn-orange{
+    background-color: var(--accent-color);
+}
+.calc__btn-orange:hover{
+    background-color: var(--accent-color-hover);
+}
+.calc__screen{
+    padding:5px;
+    margin-bottom: 5px;
+    font-size: calc((var(--index)*5));
+    text-align: right;
+    border-radius: 8px;
+}
+.calc__info{
+    transition: 0.2s ease-in-out;
+}
+.calc__history{
+    margin: 15px;
+    padding: 5px;
+    width: 50%;
+    height: 55vh;
+    font-size: 20px;
+    background-color: rgba(0, 0, 0, 0.35);
+    padding: 9px;
+    border-radius: 8px;
+    transition: 0.25s ease-in-out;
+}
+.history__list{
+    transition: 0.25s ease-in-out;
+}

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Project2377</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js" type="text/javascript"></script>
+    
+    <script src="libs/gsap/gsap.min.js" defer></script>
+    <script src="libs/gsap/ScrollTrigger.min.js" defer></script>
+    <script src="libs/gsap/ScrollSmoother.min.js" defer></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="script/main.js" defer></script>
+
+</head>
+<body>
+<div class="wrapper">
+  <div class="content">
+
+    <!-- Навигация -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <!-- логотип -->
+        <a href="" class="navbar-brand">Ваш логотип</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" 
+          aria-controls="navbarContent" aria-expanded="flase">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- навбар контент -->
+        <div class="collapse navbar-collapse" id="navbarContent">
+          <ul class="navbar-nav me-auto mb-2">
+            <li class="nav-item">
+              <a href="*" class="nav-link">Главная</a>
+            </li>
+            <li class="nav-item">
+              <a href="*" class="nav-link">О вас</a>
+            </li>
+          </ul>
+          <!-- кнопки для модального окна -->
+          <div class="d-flex ">
+            <button class="btn btn-outline-primary me-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Войти</button>
+            <button class="btn btn-outline-danger me-2"> Выйти</button>
+          </div>
+        </div>
+      </div>
+    </nav>  
+
+
+    <!-- кнопка регистрации -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasRightLabel">Регистрациия</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Закрыть"></button>
+      </div>
+      <div class="offcanvas-body">
+        <form>
+            <div class="mb-3 text-dark">
+              <label for="exampleInputEmail1 text-dark" class="form-label">Адрес электронной почты</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <div id="emailHelp" class="form-text text-dark">Мы никогда никому не передадим вашу электронную почту.</div>
+            </div>
+            <div class="mb-3 text-dark">
+              <label for="exampleInputPassword1 text-dark" class="form-label">Пароль</label>
+              <input type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label text-dark" for="exampleCheck1">Проверить меня</label>
+            </div>
+        </form>
+        <button type="button" class="btn btn-primary">Сохранить изменения</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="offcanvas">Закрыть</button>
+      </div>
+    </div>
+
+
+    <!-- 1 слайд  -->
+    <header class="main-header">
+      <div class="layers">
+        <div class="layer__header">
+          <div class="layers__caption">Добро пожаловать</div>
+          <div class="layers__title">А тут мог быть твой сайт</div>
+        </div>
+        <div class="layer layers__base" style="background-image: url(img/dew.png);"></div>
+        <div class="layer layers__midle" style="background-image: url(img/ver.png);"></div>
+        <div class="layer layers__front" style="background-image: url(img/verss-—-копия.png);"></div>
+      </div>
+    </header>
+
+    <!-- 2 слайд -->
+    <article class="main-article" style="background-image: url(img/back.png);">
+      <div class="main-article__content">
+        <h2 class="main-article__header">Описание вашей компании</h2>
+        <p class="main-article__paragraph">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis error provident dignissimos facere. Repellendus tempore autem qui! Quia magnam tempora esse id necessitatibus corrupti mollitia expedita sapiente cum rerum, ut dicta laboriosam!</p>
+        <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">Доп информация</button>
+      </div>
+    </article>
+    
+
+
+    <!-- кнопка с выездом -->
+    <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+      <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasTopLabel">Дополнительный текст</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Закрыть"></button>
+    </div>
+    <!--  доделать тельце-->
+    <div class="offcanvas-body"> 
+      Здесь могут быть различные ссылки, картики и различные элементы ограниченные вашей фантазией
+    </div>
+</div>
+
+    <!-- карусель -->
+    <div class="containerGalery">
+      <div class="description">
+        <div class="logo text-dark">Галерея</div>
+        <p class="text-dark">Смотрите какие фотографии,а здесь могут быть и ваши</p>
+      </div>
+  
+    <div class="swiper slider slider_main ">
+        <div class="swiper-wrapper slider__wrapper">
+          <div class="swiper-slide slider__item">
+            <div class="slider__img"  style="background-image: url(img/1.webp);"></div>
+          </div>
+          <div class="swiper-slide slider__item">
+            <div class="slider__img" style="background-image: url(img/2.webp)"></div>
+          </div>
+          <div class="swiper-slide slider__item">
+            <div class="slider__img" style="background-image: url(img/3.webp);"></div>
+          </div>
+          <div class="swiper-slide slider__item">
+            <div class="slider__img" style="background-image: url(img/4.webp)"></div>
+          </div>
+          <div class="swiper-slide slider__item">
+            <div class="slider__img" style="background-image: url(img/5.webp)"></div>
+          </div>
+          <div class="swiper-slide slider__item">
+            <div class="slider__img" style="background-image: url(img/6.webp)"></div>
+          </div>
+          <div class="swiper-slide slider__item">
+            <div class="slider__img" style="background-image: url(img/7.webp)"></div>
+          </div>
+          <div class="swiper-slide slider__item">
+            <div class="slider__img" style="background-image: url(img/8.webp)"></div>
+          </div>
+          <div class="swiper-slide slider__item">
+            <div class="slider__img" style="background-image: url(img/9.webp)"></div>
+          </div>
+        </div>
+    </div>
+  
+    <div class="swiper slider slider_bg">
+        <div class="swiper-wrapper slider__wrapper">
+          <div class="swiper-slide slider__item">
+            <div class="slider__img"  style="background-image: url(img/1.webp);"></div>
+          </div>
+          <div class="swiper-slide slider__item">
+            <div class="slider__img" style="background-image: url(img/2.webp)"></div>
+          </div>
+          <div class="swiper-slide slider__item">
+            <div class="slider__img" style="background-image: url(img/3.webp);"></div>
+          </div>
+          <div class="swiper-slide slider__item">
+            <div class="slider__img" style="background-image: url(img/4.webp)"></div>
+          </div>
+          <div class="swiper-slide slider__item">
+            <div class="slider__img" style="background-image: url(img/5.webp)"></div>
+          </div>
+          <div class="swiper-slide slider__item">
+            <div class="slider__img" style="background-image: url(img/6.webp)"></div>
+          </div>
+          <div class="swiper-slide slider__item">
+            <div class="slider__img" style="background-image: url(img/7.webp)"></div>
+          </div>
+          <div class="swiper-slide slider__item">
+            <div class="slider__img" style="background-image: url(img/8.webp)"></div>
+          </div>
+          <div class="swiper-slide slider__item">
+            <div class="slider__img" style="background-image: url(img/9.webp)"></div>
+          </div>
+        </div>
+    </div>
+    </div>
+    <!-- уведомление -->
+    <!-- <div class="fixed-bottom mb-3 ms-3"></div><button type="button" class="btn btn-primary" id="liveToastBtn">Показать лайв тосты</button></div> -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+      <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+          <strong class="me-auto">Автор</strong>
+          <small>Только что</small>
+          <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Закрыть"></button>
+        </div>
+        <div class="toast-body text-dark">
+          Это уведомление!!! Оно работает по клику и отсчету времени
+        </div>
+      </div>
+    </div>
+
+
+    <!-- что было использованно -->
+    <center><h1 class="mt-3" style="font-size: calc(var(--index)*1.6);">Что было использованно</h1></center>
+    <div class="magic-list">
+      <!-- придумать что то для телефонов -->
+      <div href="https://html5book.ru/" class="magic-list__item"> 
+        <div class="magic-list__header">Html, Css и Js</div>
+      </div>
+      <a href="https://bootstrap-4.ru/" class="magic-list__item">
+        <div class="magic-list__header">bootstrap 5.2</div>
+        
+      </a>
+      <a href="https://swiperjs.com/" class="magic-list__item">
+        <div class="magic-list__header">swiper js</div>
+        
+      </a>
+      <a href="https://greensock.com/gsap/" class="magic-list__item">
+        <div class="magic-list__header">gsap</div>
+        
+      </a>
+    </div>
+
+  </div>
+</div>
+</body>
+</html>

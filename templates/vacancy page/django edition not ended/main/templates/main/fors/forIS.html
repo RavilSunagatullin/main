@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>IS</title>
+    
+    <script src="../libs/gsap/gsap.min.js" defer></script>
+    <script src="../libs/gsap/ScrollTrigger.min.js" defer></script>
+    <script src="../libs/gsap/ScrollSmoother.min.js" defer></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../script/main.js" defer></script>
+</head>
+<body style="background-color:var(--light)">
+<div class="wrapper">
+    <div class="content">
+        <!-- Навигация -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="yakor">
+        <div class="container">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" 
+            aria-controls="navbarContent" aria-expanded="flase">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <!-- навбар контент -->
+          <div class="collapse navbar-collapse" id="navbarContent">
+            <ul class="navbar-nav me-auto mb-1 mt-1">
+              <li class="nav-item">
+                <a href="../index.html" class="nav-link">Главная</a>
+              </li>
+              <li class="nav-item">
+                <button class="btn btn-primary me-2"><a href="https://tehcoll.org/sveden/education?id=108" style="text-decoration: none; color: var(--light);">о специальности</a></button>
+              </li>
+            </ul>
+                <button class="btn btn-primary me-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop">Вакансии</button>
+          </div>
+        </div>
+        </nav> 
+    <!-- выдвижное окно  -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="staticBackdropLabel">Выбери свою СПО <br>P.S есть редкие баги</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Закрыть"></button>
+      </div>
+      <div class="offcanvas-body">
+          <!-- TT -->
+          <div class="card mb-3 me-2 bg-dark">
+            <a href="../fors/forTT.html"style="text-decoration:None; color:var(--light)">
+            <div class="row g-0">
+                <div class="col-md-4">
+                        <img src="../img/TT.png" class="img-fluid rounded-start mt-3 ms-3 mb-3 me-3" alt="..."style="width: calc(var(--index)*5)">
+                </div>
+            <div class="col-md-8">
+                    <div class="card-body">
+                            <p class="card-text mt-1 ms-1 mb-1 me-1">Технология машиностроения</p>
+                    </div>
+                </div>
+            </div>
+            </a>
+          </div>
+          <!-- IS -->
+          <div class="card mb-3  me-2 bg-dark">
+            <a href="../fors/forIS.html"style="text-decoration:None; color:var(--light)">
+            <div class="row g-0">
+                <div class="col-md-4">
+                        <img src="../img/IS.png" class="img-fluid rounded-start mt-3 ms-3 mb-3 me-3" alt="..." style="width: calc(var(--index)*5)">
+                </div>
+            <div class="col-md-8">
+                    <div class="card-body">
+                            <p class="card-text mt-1 ms-1 mb-1 me-1">Информационные системы и программирование</p>
+                    </div>
+                </div>
+            </div>
+            </a>
+          </div>
+          <!--CHPY  -->
+          <div class="card mb-3 me-2 bg-dark">
+            <a href="../fors/forCHPY.html"style="text-decoration:None; color:var(--light)">
+            <div class="row g-0">
+                <div class="col-md-4">
+                        <img src="../img/CHPY.png" class="img-fluid rounded-start mt-3 ms-3 mb-3 me-3" alt="..." style="width: calc(var(--index)*5)">
+                </div>
+            <div class="col-md-8">
+                    <div class="card-body">
+                            <p class="card-text mt-1 ms-1 mb-1 me-1">Наладчик станков и оборудования в механообработке</p>
+                    </div>
+                </div>
+            </div>
+            </a>
+          </div>
+          <!-- TERP -->
+          <div class="card mb-3 me-2 bg-dark">
+            <a href="../fors/forTERP.html"style="text-decoration:None; color:var(--light)">
+            <div class="row g-0">
+                <div class="col-md-4">
+                        <img src="../img/TERP.png" class="img-fluid rounded-start mt-3 ms-3 mb-3 me-3" alt="..."style="width: calc(var(--index)*5)">
+                </div>
+            <div class="col-md-8">
+                    <div class="card-body">
+                            <p class="card-text mt-1 ms-1 mb-1 me-1">Техническая эксплуатация и обслуживание роботизированного производства</p>
+                    </div>
+                </div>
+            </div>
+            </a>
+          </div>
+          <!-- OP -->
+          <div class="card mb-3  me-2 bg-dark">
+            <a href="../fors/forOP.html"style="text-decoration:None; color:var(--light)">
+            <div class="row g-0">
+                <div class="col-md-4">
+                        <img src="../img/OP.png" class="img-fluid rounded-start mt-3 ms-3 mb-3 me-3" alt="..." style="width: calc(var(--index)*5)">
+                </div>
+            <div class="col-md-8">
+                    <div class="card-body">
+                            <p class="card-text mt-1 ms-1 mb-1 me-1">Организация перевозок и управление на транспорте </p>
+                    </div>
+                </div>
+            </div>
+            </a>
+          </div>
+          <!-- TM -->
+          <div class="card mb-3 me-2 bg-dark">
+            <a href="../fors/forTM.html"style="text-decoration:None; color:var(--light)">
+            <div class="row g-0">
+                <div class="col-md-4">
+                        <img src="../img/TM.png" class="img-fluid rounded-start mt-3 ms-3 mb-3 me-3" alt="..." style="width: calc(var(--index)*5)">
+                </div>
+            <div class="col-md-8">
+                    <div class="card-body">
+                            <p class="card-text mt-1 ms-1 mb-1 me-1">Техническое обслуживание и ремонт двигателей, систем и агрегатов автомобилей </p>
+                    </div>
+                </div>
+            </div>
+            </a>
+          </div>
+          <!-- montazh -->
+          <div class="card mb-3 me-2 bg-dark">
+            <a href="../fors/forMO.html"style="text-decoration:None; color:var(--light)">
+            <div class="row g-0">
+                <div class="col-md-4">
+                        <img src="../img/montazh.png" class="img-fluid rounded-start mt-3 ms-3 mb-3 me-3" alt="..."style="width: calc(var(--index)*5)">
+                </div>
+            <div class="col-md-8">
+                    <div class="card-body">
+                            <p class="card-text mt-1 ms-1 mb-1 me-1">Монтаж, техническое обслуживание и ремонт промышленного оборудования  </p>
+                    </div>
+                </div>
+            </div>
+            </a>
+          </div>
+          <!-- kachestvo -->
+          <div class="card mb-3  me-2 bg-dark">
+            <a href="../fors/forKA.html"style="text-decoration:None; color:var(--light)">
+            <div class="row g-0">
+                <div class="col-md-4">
+                        <img src="../img/kachestvo.png" class="img-fluid rounded-start mt-3 ms-3 mb-3 me-3" alt="..." style="width: calc(var(--index)*5)">
+                </div>
+            <div class="col-md-8">
+                    <div class="card-body">
+                            <p class="card-text mt-1 ms-1 mb-1 me-1">Управление качеством продукции, процессов и услуг (по отраслям)</p>
+                    </div>
+                </div>
+            </div>
+            </a>
+          </div>
+          <!-- BY -->
+          <div class="card mb-3 me-2 bg-dark">
+            <a href="../fors/forBY.html"style="text-decoration:None; color:var(--light)">
+            <div class="row g-0">
+                <div class="col-md-4">
+                        <img src="../img/BY.png" class="img-fluid rounded-start mt-3 ms-3 mb-3 me-3" alt="..." style="width: calc(var(--index)*5)">
+                </div>
+            <div class="col-md-8">
+                    <div class="card-body">
+                            <p class="card-text mt-1 ms-1 mb-1 me-1">Экономика и бухгалтерский учет </p>
+                    </div>
+                </div>
+            </div>
+            </a>
+          </div>
+
+      </div>
+    </div>
+
+    <!-- карточки -->
+    <div class="container mt-4">
+      <!-- 1 карточка -->
+      <div class="card mb-3 bg-dark" style="max-width: calc(var(--index)*50)">
+          <div class="row g-0">
+            <div class="col-md-4 me-3 ms-3 mb-2 mt-3 bg-light" style="border-radius: 8px;padding: calc(var(--index)/5);">
+              <img src="../img/alabuga.svg" style="max-width: calc(var(--index)*9);max-height: calc(var(--index)*9)" class="img-fluid rounded-start">
+            </div>
+            <div class="col-xxl-8" style="max-width: calc(var(--index)*45)">
+              <div class="card-body"style="font-size:calc(var(--index)/1.25)">
+                <h5 class="card-title" style="font-size:calc(var(--index))">Инженер-программист 1С</h5>
+                <p class="card-text">Требуемый опыт работы: 3–6 лет, полный день.</p>
+                <p class="card-text">Требования:</p>
+                <ul>
+                  <li>Высшее техническое образование в сфере IT;</li>
+                  <li>Желательно, наличие сертификата специалиста по платформе 1С;</li>
+                  <li>Опыт работы на проектах внедрения либо выполнения задач по сопровождению конфигурации 1C Документооборот в компаниях среднего или крупного бизнеса;</li>
+                  <li>Опыт интеграции конфигурации 1С Документооборот c другими информационными системами.</li>
+                </ul>
+                <p class="card-text" style="font-size:calc(var(--index))">от 150 000 до 230 000 руб. до вычета налогов</p>
+                <button class="btn btn-primary me-2"><a href="https://clck.ru/33RauX" style="text-decoration: none; color: var(--light);">Перейти</a></button>
+              </div>
+            </div>
+          </div>
+      </div>
+  
+      <!-- 2 карточка -->
+      <div class="card mb-3 bg-dark" style="max-width: calc(var(--index)*50)">
+        <div class="row g-0">
+          <div class="col-md-4 me-3 ms-3 mb-2 mt-3">
+            <img src="../img/agro.jpeg" style="max-width: calc(var(--index)*7.5);max-height: calc(var(--index)*7.5);border-radius: 8px;" class="img-fluid rounded-start">
+          </div>
+          <div class="col-xxl-8" style="max-width: calc(var(--index)*45)">
+            <div class="card-body"style="font-size:calc(var(--index)/1.25)">
+              <h5 class="card-title" style="font-size:calc(var(--index))">Ведущий программист отдела информационных систем</h5>
+              <p class="card-text">Требуемый опыт работы: 1–3 лет, полный день.</p>
+              <p class="card-text">Требования:</p>
+                <ul>
+                  <li>Высшее образование (техническое, экономическое);</li>
+                  <li>Прикладная информатика в экономике, прикладная математика в экономике, менеджмент, финансы и кредит;</li>
+                  <li>Опыт работы на должностях: Программист;</li>
+                  <li>Стаж работы по специальности с аналогичным функционалом не менее 2 лет</li>
+                  <li>уверенный пользователь ПК</li>
+                </ul>
+              <p class="card-text" style="font-size:calc(var(--index))">от 95 000 до 131 000 руб. до вычета налогов</p>
+              <button class="btn btn-primary me-2"><a href="https://clck.ru/33RbKD" style="text-decoration: none; color: var(--light);">Перейти</a></button>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- 3 карточка -->
+      <div class="card mb-3 bg-dark" style="max-width: calc(var(--index)*50)">
+      <div class="row g-0">
+        <div class="col-md-4 me-3 ms-3 mb-2 mt-3">
+          <img src="../img/alpha.png" style="max-width: calc(var(--index)*9);max-height: calc(var(--index)*9)" class="img-fluid rounded-start">
+        </div>
+        <div class="col-xxl-8" style="max-width: calc(var(--index)*45)">
+          <div class="card-body"style="font-size:calc(var(--index)/1.25)">
+            <h5 class="card-title" style="font-size:calc(var(--index))">Методолог</h5>
+            <p class="card-text">Требуемый опыт работы: 3–6 лет, полный день.</p>
+            <p class="card-text">Требования:</p>
+              <ul>
+                <li>Опыт работы от 3-х лет;</li>
+                <li>Знание программ: 1С, Business Studio, Word, Excel, PowerPoint;</li>
+                <li>Аналитические способности; внимательность; добросовестность.</li>
+              </ul>
+            <p class="card-text" style="font-size:calc(var(--index))">от 70 000 до 100 000 руб. на руки</p>
+            <button class="btn btn-primary me-2"><a href="https://clck.ru/33Rbtt" style="text-decoration: none; color: var(--light);">Перейти</a></button>
+          </div>
+        </div>
+      </div>
+      </div>
+  
+      <!-- 4 карточка -->
+      <div class="card mb-3 bg-dark" style="max-width: calc(var(--index)*50)">
+        <div class="row g-0">
+          <div class="col-md-4 me-3 ms-3 mb-2 mt-3">
+            <img src="../img/aki.svg" style="max-width: calc(var(--index)*10);max-height: calc(var(--index)*10)" class="img-fluid rounded-start">
+          </div>
+          <div class="col-xxl-8" style="max-width: calc(var(--index)*45)">
+            <div class="card-body"style="font-size:calc(var(--index)/1.25)">
+              <h5 class="card-title" style="font-size:calc(var(--index))">Старший администратор по сопровождению информационных систем (банковские карты)</h5>
+              <p class="card-text">Требуемый опыт работы: 3–6 лет</p>
+              <p class="card-text">Требования:</p>
+              <ul>
+                <li>коммуникабельность (должностные обязанности предполагают взаимодействие с сотрудниками банка и с поставщиками и разработчиками ПО);</li>
+                <li>понимание принципов разработки программного обеспечения;</li>
+                <li>нацеленность на долгосрочные отношения с работодателем (не менее 3-5 лет)</li>
+                <li>способность к самообучению;</li>
+                <li>инициативность;</li>
+              </ul>
+              <p class="card-text" style="font-size:calc(var(--index))">от 75 000 руб. до вычета налогов</p>
+              <button class="btn btn-primary me-2"><a href="https://clck.ru/33RbzH" style="text-decoration: none; color: var(--light);">Перейти</a></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+</div>     
+</div>
+</body>
+</html>

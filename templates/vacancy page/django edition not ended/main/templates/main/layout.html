@@ -1,0 +1,242 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Сайт с вакансиями для выпускников технического колледжа им.В.Д Поташова">
+    <meta name="keywords" content="Технический колледж им. В.Д. Поташова, технический колледж в набережных челнах, Набережные Челны, поташова, вакансии, выпускникам поташова, куда идти после поташова, Набережные Челны, вакансии в Наб.Челнах">
+    
+    <title>{{title}}</title>
+
+    <link rel="stylesheet" href="{% static 'main/libs/SWIPER/swiper-bundle.min.css' %}" />
+    <script src="{% static 'main/libs/SWIPER/swiper-bundle.min.js' %}" type="text/javascript" defer></script>
+    <script src="{% static 'main/libs/SWIPER/bindSwipers.js' %}" defer></script>
+    
+    <script src="{% static 'main/libs/gsap/gsap.min.js' %}" defer></script>
+    <script src="{% static 'main/libs/gsap/ScrollTrigger.min.js' %}" defer></script>
+    <script src="{% static 'main/libs/gsap/ScrollSmoother.min.js' %}" defer></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="{% static 'main/css/style.css' %}">
+    <script src="{% static 'main/script/main.js' %}" defer></script>
+
+</head>
+<body>
+<div class="wrapper">
+    <div class="content">
+    
+    <!-- Навигация -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="yakor">
+        <div class="container">
+        <!-- логотип -->
+        <a href="https://tehcoll.org/" class="navbar-brand ">Колледж им. В.Д.Поташова</a>
+        <!-- <img src="img/logo.svg" alt="" style="height: 130px;width:130px;"> -->
+        
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" 
+            aria-controls="navbarContent" aria-expanded="flase">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- навбар контент  -->
+        <div class="collapse navbar-collapse" id="navbarContent">
+            <div class="navbar-nav me-auto mb-1 mt-1 d-flex">
+            <div class="nav-item">
+                <a class="btn btn-outline-primary me-2 mb-2" href="{{linkForApplicants}}" role="button">{{forApplicants}}</a>
+                <!-- <button class="btn btn-outline-primary me-2 mb-2"><a href="{{linkForApplicants}}" style="text-decoration: none; color: var(--light);">{{forApplicants}}</a></button> -->
+            </div>
+            <div class="nav-item">
+                <button class="btn btn-outline-warning me-3 mb-2 " type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop">Поиск работы</button>
+            </div>
+            </div>
+            <!-- кнопки для модального окна -->
+            <div class="d-flex">
+                <button class="btn btn-outline-primary me-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Войти</button>
+                <button class="btn btn-outline-danger me-2"> Выйти</button>
+            </div>
+        </div>
+        </div>
+    </nav>  
+    
+    <!-- кнопка регистрации -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasRightLabel">Регистрациия</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Закрыть"></button>
+        </div>
+        <div class="offcanvas-body">
+            <form>
+            <div class="mb-3 text-dark">
+                <label for="exampleInputEmail1 text-dark" class="form-label">Адрес электронной почты</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <div id="emailHelp" class="form-text text-dark">Мы никогда никому не передадим вашу электронную почту.</div>
+            </div>
+            <div class="mb-3 text-dark">
+                <label for="exampleInputPassword1 text-dark" class="form-label">Пароль</label>
+                <input type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label text-dark" for="exampleCheck1">Проверить меня</label>
+            </div>
+            </form>
+            <button type="button" class="btn btn-primary">Сохранить изменения</button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="offcanvas">Закрыть</button>
+        </div>
+
+    </div>
+
+    <!-- выдвижное окно -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="staticBackdropLabel">Выбери свою СПО</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Закрыть"></button>
+        </div>
+        <div class="offcanvas-body">
+            
+            <!-- TT -->
+            <div class="card mb-3 me-2 bg-dark">
+                <a href="{% url 'TT' %}"style="text-decoration:None; color:var(--light)">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="{% static 'main/img/TT.png' %}" class="img-fluid rounded-start mt-3 ms-3 mb-3 me-3" alt="..."style="width: calc(var(--index)*5)">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <p class="card-text mt-1 ms-1 mb-1 me-1">Технология машиностроения</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <!-- IS -->
+            <div class="card mb-3  me-2 bg-dark">
+                <a href="{% url 'IS' %}"style="text-decoration:None; color:var(--light)">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="{% static 'main/img/IS.png' %}" class="img-fluid rounded-start mt-3 ms-3 mb-3 me-3" alt="..." style="width: calc(var(--index)*5)">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <p class="card-text mt-1 ms-1 mb-1 me-1">Информационные системы и программирование</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <!--CHPY  -->
+            <div class="card mb-3 me-2 bg-dark">
+                <a href="{% url 'CHPY' %}" style="text-decoration:None; color:var(--light)">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="{% static 'main/img/CHPY.png' %}" class="img-fluid rounded-start mt-3 ms-3 mb-3 me-3" alt="..." style="width: calc(var(--index)*5)">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <p class="card-text mt-1 ms-1 mb-1 me-1">Наладчик станков и оборудования в механообработке</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <!-- TERP -->
+            <div class="card mb-3 me-2 bg-dark"> 
+                <a href="{% url 'TERP' %}" style="text-decoration:None; color:var(--light)">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="{% static 'main/img/TERP.png' %}" class="img-fluid rounded-start mt-3 ms-3 mb-3 me-3" alt="..."style="width: calc(var(--index)*5)">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <p class="card-text mt-1 ms-1 mb-1 me-1">Техническая эксплуатация и обслуживание роботизированного производства</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <!-- OP -->
+            <div class="card mb-3  me-2 bg-dark">
+                <a href="{% url 'OP' %}"style="text-decoration:None; color:var(--light)">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="{% static 'main/img/OP.png' %}" class="img-fluid rounded-start mt-3 ms-3 mb-3 me-3" alt="..." style="width: calc(var(--index)*5)">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <p class="card-text mt-1 ms-1 mb-1 me-1">Организация перевозок и управление на транспорте </p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <!-- TM -->
+            <div class="card mb-3 me-2 bg-dark">
+                <a href="{% url 'TM' %}"style="text-decoration:None; color:var(--light)">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="{% static 'main/img/TM.png' %}" class="img-fluid rounded-start mt-3 ms-3 mb-3 me-3" alt="..." style="width: calc(var(--index)*5)">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <p class="card-text mt-1 ms-1 mb-1 me-1">Техническое обслуживание и ремонт двигателей, систем и агрегатов автомобилей </p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <!-- MO -->
+            <div class="card mb-3 me-2 bg-dark">
+            <a href="{% url 'MO' %}"style="text-decoration:None; color:var(--light)">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                            <img src="{% static 'main/img/MO.png' %}" class="img-fluid rounded-start mt-3 ms-3 mb-3 me-3" alt="..."style="width: calc(var(--index)*5)">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                                <p class="card-text mt-1 ms-1 mb-1 me-1">Монтаж, техническое обслуживание и ремонт промышленного оборудования  </p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            </div>
+            <!-- kachestvo -->
+            <div class="card mb-3  me-2 bg-dark">
+                <a href="{% url 'KA' %}"style="text-decoration:None; color:var(--light)">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                            <img src="{% static 'main/img/kachestvo.png' %}" class="img-fluid rounded-start mt-3 ms-3 mb-3 me-3" alt="..." style="width: calc(var(--index)*5)">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                                <p class="card-text mt-1 ms-1 mb-1 me-1">Управление качеством продукции, процессов и услуг (по отраслям)</p>
+                        </div>
+                    </div>
+                </div>
+                </a>
+            </div>
+            <!-- BY -->
+            <div class="card mb-3 me-2 bg-dark">
+                <a href="{% url 'BY' %}"style="text-decoration:None; color:var(--light)">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                            <img src="{% static 'main/img/BY.png' %}" class="img-fluid rounded-start mt-3 ms-3 mb-3 me-3" alt="..." style="width: calc(var(--index)*5)">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                                <p class="card-text mt-1 ms-1 mb-1 me-1">Экономика и бухгалтерский учет </p>
+                        </div>
+                    </div>
+                </div>
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+    </div>
+</div>
+</body>
+</html>
