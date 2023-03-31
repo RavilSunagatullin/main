@@ -115,8 +115,9 @@ document.querySelectorAll('.calc__btn').forEach(elem => {
         }
         finish=true
         out.textContent = Intl.NumberFormat("ru").format(firstNum);
-        console.table(firstNum, secondNum, mark)
         history(firstNum, secondNum, mark)
+
+
     }
 })
 })
@@ -128,18 +129,27 @@ function history(firstNum, secondNum, mark){
     let today = new Date()
     let hour =today.getHours()
     let minutes = today.getMinutes()
-    // let hour  = today.toLocaleString('ru');
-    console.log(hour)
+    if(minutes<10){
+        minutes.toString()
+        minutes = '0'+minutes
+    }
 
     const historyText = document.createElement('li')
-    historyText.innerText = `${counter}) ${oldFirstNum} ${mark} ${secondNum} = ${firstNum} время: ${hour}:${minutes}`
-    // localStorage.setItem(counter, historyText.innerText)
+    historyText.innerText = `${oldFirstNum} ${mark} ${secondNum} = ${firstNum} время: ${hour}:${minutes}`
+    localStorage.setItem(counter, `${historyText.innerText}`);
     historyList.append(historyText)
 
+
+    
     if(counter >= 20){
         const removeLi = document.querySelector('li')
         removeLi.remove()
     }
+    historyText.addEventListener('click', function(event){
+        this.remove()
+        counter=counter-1
+    })
+   
 }
 function removeHistory(){
     const li = document.querySelectorAll('li')
@@ -147,3 +157,4 @@ function removeHistory(){
         element.remove()
     });
 }
+
