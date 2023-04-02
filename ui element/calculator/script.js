@@ -7,7 +7,6 @@ let counter = 0
 
 
 
-
 const digit = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '.']   
 const action = ['+', '-', 'x', '/']
 const additionFunction = ['-/+', 'del']
@@ -22,6 +21,7 @@ document.querySelector('.ac').addEventListener('click', function clearAll(){
     out.textContent = 0
     counter = 0
     removeHistory()
+    localStorage.clear()
 })
 
 document.querySelectorAll('.calc__btn').forEach(elem => {
@@ -108,7 +108,9 @@ document.querySelectorAll('.calc__btn').forEach(elem => {
                 case'x':
                     oldFirstNum= firstNum
                     firstNum=(+firstNum)*(+secondNum)
-                    if(+firstNum<1 || +firstNum<-1){
+                    if(firstNum==0){
+                        firstNum=(+firstNum)*(+secondNum)
+                    }else if(firstNum<1 || firstNum<-1){
                         firstNum=(+firstNum).toFixed(3)
                     }
                     break
@@ -136,19 +138,22 @@ function history(firstNum, secondNum, mark){
 
     const historyText = document.createElement('li')
     historyText.innerText = `${oldFirstNum} ${mark} ${secondNum} = ${firstNum} время: ${hour}:${minutes}`
-    localStorage.setItem(counter, `${historyText.innerText}`);
     historyList.append(historyText)
+    localStorage.setItem(counter, `${historyText.innerText}`)
 
-
-    
+    historyText.addEventListener('click', function(event){
+        this.remove()
+        console.log(counter)
+        localStorage.removeItem(counter)
+    })
+ 
     if(counter >= 20){
         const removeLi = document.querySelector('li')
         removeLi.remove()
+       
     }
-    historyText.addEventListener('click', function(event){
-        this.remove()
-        counter=counter-1
-    })
+
+   
    
 }
 function removeHistory(){
