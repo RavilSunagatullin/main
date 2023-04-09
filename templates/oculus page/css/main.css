@@ -26,6 +26,9 @@ button {
   font-family: inherit;
   padding: 0;
 }
+button:focus {
+  outline: none;
+}
 
 body {
   line-height: 1;
@@ -223,7 +226,6 @@ body {
 
 .features {
   padding: 100px 0;
-  margin-bottom: 10px;
 }
 
 .features__titles {
@@ -262,7 +264,8 @@ body {
 }
 
 .tabs__buttons-item--active {
-  color: #070707;
+  color: #020202;
+  color-font-weight: 700;
 }
 
 .tabs__content-img {
@@ -311,4 +314,67 @@ body {
 .video span {
   color: #f6f4f5;
   font-size: 13px;
+}
+
+.game__title {
+  margin-bottom: 50px;
+}
+
+.game__inner {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.game__description {
+  padding-right: 10px;
+}
+
+.game__description-title {
+  background: linear-gradient(180deg, #BC10D8 0%, rgba(80, 0, 250, 0.93) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 36px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.game__description-text {
+  margin-bottom: 24px;
+}
+
+.game__link {
+  display: inline-block;
+  background: linear-gradient(180deg, #BC10D8 0%, rgba(80, 0, 250, 0.93) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 16px 15px 12px;
+  width: 225px;
+  text-align: center;
+  border: 1px solid #BC10D8;
+}
+
+.game__item {
+  border: 1px solid #BC10D8;
+  padding: 10px 20px 18px;
+  display: flex;
+  flex-direction: column;
+}
+.game__item img {
+  margin-bottom: 10px;
+}
+.game__item-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.game__item-text {
+  margin-bottom: 30px;
+}
+.game__item-link {
+  font-size: 16px;
+  background: linear-gradient(180deg, #BC10D8 0%, rgba(80, 0, 250, 0.93) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: auto;
 }/*# sourceMappingURL=main.css.map */
