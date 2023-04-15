@@ -352,11 +352,17 @@ body {
   padding: 16px 15px 12px;
   width: 225px;
   text-align: center;
-  border: 1px solid #BC10D8;
+  border: 10px solid;
+  border-image-slice: 1;
+  border-width: 2px;
+  border-image-source: linear-gradient(180deg, #bc10d8 0%, rgba(80, 0, 250, 0.93) 100%);
 }
 
 .game__item {
-  border: 1px solid #BC10D8;
+  border: 10px solid;
+  border-image-slice: 1;
+  border-width: 2px;
+  border-image-source: linear-gradient(180deg, #bc10d8 0%, rgba(80, 0, 250, 0.93) 100%);
   padding: 10px 20px 18px;
   display: flex;
   flex-direction: column;
@@ -414,4 +420,191 @@ body {
     transform: translateX(-115%);
     transform-origin: right center;
   }
+}
+.equipment {
+  margin-bottom: 100px;
+}
+
+.equipment__title {
+  margin-bottom: 50px;
+}
+
+.equipment__box {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.equipment__box-item--one {
+  grid-row: 1/-1;
+}
+
+.equipment__box-img {
+  margin-bottom: 10px;
+}
+
+.equipment__box-title {
+  background: linear-gradient(180deg, #BC10D8 0%, rgba(80, 0, 250, 0.93) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 36px;
+  text-transform: uppercase;
+  line-height: 50px;
+}
+
+.promo__inner {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  background-image: url(../images/promo/Metaverse.jpg);
+  min-height: 500px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center 0;
+  text-align: center;
+  position: relative;
+}
+
+.promo__button {
+  font-weight: 700;
+  color: #fff;
+  background: linear-gradient(180deg, #BC10D8 0%, rgba(80, 0, 250, 0.93) 100%);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 80px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+.accessories__title {
+  margin-bottom: 30px;
+}
+
+.accessories__text {
+  margin-bottom: 30px;
+  background: linear-gradient(180deg, #BC10D8 0%, rgba(80, 0, 250, 0.93) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 36px;
+  text-transform: uppercase;
+}
+
+.accessories__items {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.accessories__item {
+  padding: 20px;
+  border: 10px solid;
+  border-image-slice: 1;
+  border-width: 2px;
+  border-image-source: linear-gradient(180deg, #bc10d8 0%, rgba(80, 0, 250, 0.93) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.accessories__item-img {
+  margin-bottom: 10px;
+}
+.accessories__item-title {
+  font-size: 24px;
+  color: #070707;
+  min-height: 67px;
+}
+.accessories__item-text {
+  margin-bottom: 35px;
+  margin-top: auto;
+}
+.accessories__item-price {
+  font-weight: 700;
+  line-height: 18px;
+  color: #070707;
+  margin-bottom: 20px;
+  margin-top: auto;
+}
+.accessories__item-button {
+  padding: 6px;
+  font-weight: 700;
+  text-align: center;
+  width: 100%;
+  background: linear-gradient(180deg, #BC10D8 0%, rgba(80, 0, 250, 0.93) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border: 10px solid;
+  border-image-slice: 1;
+  border-width: 2px;
+  border-image-source: linear-gradient(180deg, #bc10d8 0%, rgba(80, 0, 250, 0.93) 100%);
+}
+
+.contacts__title {
+  margin-top: 100px;
+  font-size: 24px;
+  line-height: 33px;
+  color: #070707;
+  margin-bottom: 10px;
+}
+.contacts__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+.contacts__form {
+  flex-basis: 600px;
+}
+.contacts__text {
+  font-size: 13px;
+}
+
+.form {
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.form__input {
+  outline: none;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #cacad6;
+  padding: 22px 70px 22px 0;
+}
+.form__input:placeholder {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 15px;
+  color: #cacad6;
+}
+
+.form__button {
+  width: 50px;
+  height: 50px;
+  background-color: #cacad6;
+  text-transform: uppercase;
+  border-radius: 50%;
+  color: #5C5C5E;
+  position: absolute;
+  right: 0;
+  bottom: 5px;
+}
+
+.footer {
+  margin-top: 100px;
+  margin-bottom: 44px;
+  border-top: 1px solid #cacad6;
+  border-bottom: 1px solid #cacad6;
+  padding: 15px 0;
+}
+
+.nav__social {
+  display: flex;
+  gap: 20px;
+  justify-self: end;
 }/*# sourceMappingURL=main.css.map */
