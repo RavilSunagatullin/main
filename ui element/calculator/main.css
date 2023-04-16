@@ -93,6 +93,17 @@ ul, li{
 }
 .calc__info{
     transition: 0.2s ease-in-out;
+    max-width: 230px;
+    font-size: calc((var(--index)*5));
+    background:transparent;
+    outline: none;
+    padding: 10px;
+    border: 2px solid var(--white-color);
+    border-radius: 8px;
+    box-shadow: none;
+    color:#f5f5f5;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
 }
 .calc__history{
     margin: 15px;
