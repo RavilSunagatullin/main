@@ -21,3 +21,10 @@ function open(event){
     tabTarget.classList.add('tabs__buttons-item--active')
     document.querySelector(`#${button}`).classList.add('tabs__content-item--active')
 }
+
+const menuButton =document.querySelector('.menu-button')
+const menu = document.querySelector('.menu')
+
+menuButton.addEventListener('click', () =>{
+    menu.classList.toggle('menu--active')
+})
