@@ -36,26 +36,43 @@ a {
 
 img {
   display: block;
+  max-width: 100%;
 }
 
 body {
-  font-family: "Poppins", sans-serif;
-  color: #323232;
-  line-height: 1.6875;
-  padding: 0;
-  margin: 0;
+  min-width: 320px;
+  font-family: "Oswald", sans-serif;
+  color: #000;
+  line-height: 24px;
 }
 
+@font-face {
+  font-family: "Oswald";
+  src: url(../fonts/Oswald-Regular.woff) format("woff");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Merriweather";
+  src: url(../fonts/Merriweather-Light.woff) format("woff");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 300;
+}
 ::-webkit-scrollbar {
   width: 0;
 }
 
+.site-container {
+  overflow: hidden;
+}
+
 .container {
-  max-width: 1140px;
-  margin-right: auto;
-  margin-left: auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 15px;
 }
 
 .none {
@@ -63,9 +80,79 @@ body {
 }
 
 .visually-hidden {
-  opacity: 0;
-  visibility: hidden;
+  position: absolute !important;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+
+.preloader {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  z-index: 10000;
+  background-color: #b1b3b2;
+}
+
+.preloader__back {
+  font-family: "Merriweather";
+  font-size: 360px;
+  line-height: 453px;
+  color: #fff;
+  transform: translateX(5%);
+  transition: opacity 0.3s cubic-beizer(0.77, 0.125, 0.265, 1.04);
+}
+
+@keyframes preloader {
+  0% {
+    transform: translateX(7%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+.preloader__forward {
+  margin: 0;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Merriweather";
+  font-size: 72px;
+  line-height: 91px;
+  transition: opacity 0.3s cubic-beizer(0.77, 0.125, 0.265, 1.04), transform 0.3s cubic-beizer(0.77, 0.125, 0.265, 1.04);
+}
+
+.preloader__background {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 330px;
+  height: 220px;
+  background: #fff;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+.preloader__background::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
   width: 0;
-  height: 0;
-  background: transparent;
+  height: 100%;
+  background: #fff;
+  transition: widht cubic-beizer(0.77, 0.125, 0.265, 1.04);
+}
+
+.mouse {
+  display: none;
 }/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,62 @@
+.preloader 
+    display: none
+
+    position: fixed
+    left: 0
+    top: 0
+    overflow: hidden
+    // display: flex
+    align-items: center
+    justify-content: center
+    width: 100%
+    height: 100%
+    z-index: 10000
+    background-color: #b1b3b2
+
+.preloader__back 
+    font-family: 'Merriweather'
+    font-size: 360px
+    line-height: 453px
+    color: #fff
+    // opacity: 0
+    transform: translateX(5%)
+    transition: opacity 0.3s  cubic-beizer(0.77, 0.125, 0.265, 1.040)
+    // animation:  preloader 20s linear  
+
+@keyframes preloader
+    0%
+        transform: translateX(7%)
+    100%
+        transform: translateX(-100%)
+
+
+.preloader__forward
+    margin: 0
+    position: absolute
+    left: 50%
+    top: 50%
+    transform: translate(-50%, -50%)
+    font-family: 'Merriweather'
+    font-size: 72px
+    line-height: 91px
+    // opacity: 0
+    transition: opacity 0.3s  cubic-beizer(0.77, 0.125, 0.265, 1.040), transform 0.3s  cubic-beizer(0.77, 0.125, 0.265, 1.040)
+
+.preloader__background 
+    position: absolute
+    left: 50%
+    top: 50%
+    width: 330px
+    height: 220px
+    background: #fff
+    transform: translate(-50%, -50%)
+    z-index: -1
+    &::before
+        content: ''
+        position: absolute
+        left: 0
+        top: 0
+        width: 0
+        height: 100%
+        background: #fff
+        transition: widht cubic-beizer(0.77, 0.125, 0.265, 1.040)

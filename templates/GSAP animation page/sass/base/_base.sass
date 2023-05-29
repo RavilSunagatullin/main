@@ -1,27 +1,42 @@
 body
-    font-family: 'Poppins', sans-serif
-    color:#323232
-    line-height: 1.6875
-    padding: 0
-    margin: 0
+    min-width: 320px
+    font-family: 'Oswald', sans-serif
+    color:#000
+    line-height: 24px
 
+@font-face 
+    font-family: 'Oswald'
+    src: url(../fonts/Oswald-Regular.woff) format('woff')
+    font-display: swap
+    font-style: normal
+    font-weight: 400
+
+@font-face 
+    font-family: 'Merriweather'
+    src: url(../fonts/Merriweather-Light.woff) format('woff')
+    font-display: swap
+    font-style: normal
+    font-weight: 300
 
 ::-webkit-scrollbar 
     width: 0
+.site-container
+    overflow: hidden
 
 .container
-    max-width: 1140px
-    margin-right: auto
-    margin-left: auto
-    padding-left: 15px
-    padding-right: 15px
+    width: 100%
+    max-width: 1320px   
+    margin: 0 auto
+    padding: 0 15px
 
 .none
     display: none
 
 .visually-hidden
-    opacity: 0
-    visibility: hidden
-    width: 0
-    height: 0
-    background: transparent
+    position: absolute !important
+    clip: rect(1px, 1px, 1px, 1px)
+    padding: 0 !important
+    border: 0 !important
+    height: 1px !important
+    width: 1px !important
+    overflow: hidden
