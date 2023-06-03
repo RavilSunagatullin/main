@@ -7,12 +7,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The art of Arita</title>
 
-    <script href="libs/bezier.js" defer></script>
-    <script href="libs/gsap.min.js" defer></script>
-    <script href="libs/swiped-events.min.js" defer></script>
+    <script src="libs/bezier.js" defer></script>
+    <script src="libs/gsap.min.js" defer></script>
+    <script src="libs/swiped-events.min.js" defer></script>
 
     <link rel="stylesheet" href="sass/main.css">
-    <script href="js/script.js" defer></script>
+
+    <script src="js/settings.js" defer></script>
+    <script src="js/script.js" defer></script>
+
+    <script src="js/mouse.js" defer></script>
+    <script src="js/start-animation.js" defer></script>
+    <script src="js/bg-animation.js" defer></script>
+    <script src="js/images-animation.js" defer></script>
+    <script src="js/shapes-animation.js" defer></script>
+    <script src="js/text-animation.js" defer></script>
+
 </head>
 <body>
     <div class="mouse" aria-hidden="true">
@@ -54,7 +64,8 @@
         
         <main class="main-wrapper">
             <h1 class="visually-hidden">Desingners studio Arita</h1>
-            <setion class="main-setion slide-1">
+
+                <section class = "main-section slide-1">
                 <div class="container">
                     <div class="slides-container">
                         <div class="wrapper">
@@ -158,7 +169,7 @@
                 </div>
                 <div class="shapes" aria-hidden="true">
                     <div class="shapes__item shapes__item--active">
-                        <div class="shapes__content" data-bg="#c9b39b"></div>
+                        <div class="shapes__content" data-bg="#C9B39B"></div>
                     </div>
                     <div class="shapes__item index">
                         <div class="shapes__content" data-bg="#D6c8cf"></div>

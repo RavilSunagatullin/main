@@ -1,5 +1,6 @@
 html {
   box-sizing: border-box;
+  cursor: none !important;
   margin: 0;
   padding: 0;
   font-size: 16px;
@@ -29,7 +30,12 @@ ul, li {
   padding-left: 0;
 }
 
+button {
+  cursor: none !important;
+}
+
 a {
+  cursor: none !important;
   color: inherit;
   text-decoration: none;
 }
@@ -91,7 +97,7 @@ body {
   overflow: hidden;
 }
 
-.main-setion {
+.main-section {
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -210,6 +216,7 @@ body {
   position: absolute;
   left: 50%;
   top: 50%;
+  z-index: 10;
   transform: translate(-50%, -50%);
   width: 80px;
   height: 80px;
@@ -225,6 +232,20 @@ body {
   color: #fff;
   opacity: 0;
   transition: opacity ease-in-out 0.3s;
+}
+
+.view-visible .mouse__view {
+  opacity: 1;
+}
+
+.links-visible::after {
+  border: 4px solid #cdcdcd;
+  transform: translate(-50%, -50%) scale(0.5);
+  background-color: transparent;
+  transition: 0.3s;
+}
+.links-visible::before {
+  opacity: 0;
 }
 
 .header {
@@ -364,6 +385,7 @@ body {
 .slide-bg__inner--active {
   opacity: 1;
   z-index: 11;
+  pointer-events: auto;
 }
 
 .slides-container__left {
