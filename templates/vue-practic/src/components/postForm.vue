@@ -2,25 +2,31 @@
     <div>
         <form @submit.prevent>
             <h4>generation posts</h4>
-            <input 
-                class="input" 
-                type="text" 
+            <MyInput
                 placeholder="title" 
                 v-model="post.title"
-            >
-            <input 
-                class="input" 
-                type="text" 
+                >
+            </MyInput>
+            <MyInput
                 placeholder="body"
-                v-model="post.body"
-            >
-            <button class="btn" @click="createPost">let` go</button>
+                v-model="post.body">
+            </MyInput>
+            <MyButton 
+                class="btn" 
+                style=" align-self: flex-end; 
+                        margin-top: 10px;
+                        color:teal;
+                        border: 1px solid teal;"
+                @click="createPost">let` go
+            </MyButton>
         </form>
     </div>
 </template>
 
 <script>
+
     export default {
+
         data(){
             return{
                 post:{
@@ -45,24 +51,11 @@
 </script>
 
 <style>
-.input{
-    width: 100%;
-    border: 1px solid teal;
-    padding: 10px;
-    margin-top: 10px;
-}
+
 
 form{
     display: flex;
     flex-direction: column;
 }
-.btn{
-    align-self: flex-end;
-    margin-top: 15px;
-    padding: 10px 15px;
-    background: none;
-    color:teal;
-    border: 1px solid teal;
 
-}
 </style>
