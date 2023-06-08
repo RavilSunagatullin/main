@@ -1,19 +1,22 @@
 <template>
     <div class="app">
-        <MyButton
-            @click="showDialog"
-            style= "margin-top: 10px;
-                    margin-bottom: 10px;
-                    color:green;
-                    border: 1px solid green;">
-            create post
-        </MyButton>
+        <div class="app__btns">
+            <MyButton
+                @click="showDialog"
+                style= "color:green;
+                        border: 1px solid green;">
+                create post
+            </MyButton>
+            <MySelector
+                v-model="selectedSort"
+                :options="sortOptions"
+            />
+        </div>
         <MyDialog v-model:show="dialogVisible">
             <postForm
                 @create="createPost"
             />
-        </MyDialog>
-        
+        </MyDialog>     
         <postList
             :posts="posts"   
             @remove="removePost"   
@@ -39,6 +42,12 @@
                 posts:[],
                 dialogVisible: false,
                 isPostsLoading:false,
+                selectedSort:"",
+                sortOptions : [
+                    {value: 'title', name: 'by named'},
+                    {value: 'body', name: 'by content'}
+                ]
+                
             }
         },
         methods: {
@@ -73,7 +82,22 @@
         },
         mounted(){
             this.fetchPosts()
-        }
+        },
+
+        // computed:{ //переделка  watch + надо заменить в post list массив на sortedPosts
+        //     sortedPosts(){
+        //         return [...this.posts].sort((post1, post2) => { post1[this.selectedSort]?.localeCompare(post2[this.selectedSort])})
+        //     }
+        // },
+        watch: { 
+            selectedSort(newValue) {
+                this.posts.sort((post1, post2) => {
+                    return post1[newValue]?.localeCompare(post2[newValue])
+                })
+            }
+        },
+
+
     }
 </script>
 
@@ -85,5 +109,11 @@
 }
 .app{
     padding: 20px;
+}
+.app__btns{
+    display: flex;
+    gap: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 </style>
