@@ -20,7 +20,7 @@
 <style scoped>
 .input{
     width: 100%;
-    border: 1px solid teal;
+    border: 1px solid #E1E2E2;
     padding: 10px;
     margin-top: 10px;
 }

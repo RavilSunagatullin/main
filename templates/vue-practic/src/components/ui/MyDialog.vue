@@ -36,7 +36,7 @@
 }
 .dialog__content{
     margin: auto;
-    background-color: #fff;
+    background-color: #1D2228;
     border-radius: 8px;
     min-height: 50px;
     min-width: 300px;

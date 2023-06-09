@@ -12,12 +12,12 @@
 
 <style scoped>
 .btn{
-
+    border-radius: 8px;
     align-items:center;
     padding: 10px 15px;
     background: none;
-    color:red;
-    border: 1px solid red;
+    color:#FB8122;
+    border: 1px solid #FB8122;
 
 }
 </style>

@@ -2,7 +2,7 @@
     <div>
         <form @submit.prevent>
             <h4>generation posts</h4>
-            <MyInput
+            <MyInput class="input"
                 placeholder="title" 
                 v-model="post.title"
                 >
@@ -14,9 +14,7 @@
             <MyButton 
                 class="btn" 
                 style=" align-self: flex-end; 
-                        margin-top: 10px;
-                        color:teal;
-                        border: 1px solid teal;"
+                        margin-top: 10px;"
                 @click="createPost">let` go
             </MyButton>
         </form>
@@ -56,6 +54,11 @@
 form{
     display: flex;
     flex-direction: column;
+}
+.input{
+    border-radius:8px;
+    color:#E1E2E2;
+    border: 1px solid #E1E2E2;
 }
 
 </style>

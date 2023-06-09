@@ -1,5 +1,5 @@
 <template>
-    <select :value="modelValue" @change="changeOption"> <!--v-model-->
+    <select class="selector" :value="modelValue" @change="changeOption"> <!--v-model-->
         <option disabled value="">choice in list</option>
         <option 
             v-for:="option in options" 
@@ -31,5 +31,11 @@
 </script>
 
 <style scoped>
-
+.selector{
+    padding: 5px;
+    border-radius: 8px;
+    color: #E1E2E2;
+    font-weight: 700;
+    border: 1px solid #E1E2E2;
+}
 </style>

@@ -24,14 +24,16 @@
 
 <style scoped>
 .post{
+    border-radius: 8px;
     margin-top: 15px;
     padding: 15px;
-    border: 2px solid teal;
+    padding-right: 15px;
+    border: 2px solid #E1E2E2;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-/* .post__btns{
-
-} */
+.post__btns{
+    margin-left: 10px;
+}
 </style>

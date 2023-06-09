@@ -3,8 +3,9 @@
         <div class="app__btns">
             <MyButton
                 @click="showDialog"
-                style= "color:green;
-                        border: 1px solid green;">
+                style= "color: #FB8122;
+                        border: 1px solid #FB8122;
+                        font-weight: 700;">
                 create post
             </MyButton>
             <MySelector
@@ -22,8 +23,10 @@
             @remove="removePost"   
             v-if="!isPostsLoading"
          />
-        <div v-else>Loading...</div>
-
+        
+        <div v-else class="container">
+            <div >Loading...</div>
+        </div>
     </div>
 </template>
 
@@ -102,18 +105,29 @@
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,400;1,700&display=swap');
 *{
     margin: 0;
     padding:0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    background-color: #1D2228;
+    color: #E1E2E2;
 }
 .app{
     padding: 20px;
 }
 .app__btns{
     display: flex;
+    max-width: 1280px;
     gap: 30px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin: auto;
+    margin-bottom: 15px;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    max-width: 1280px;
+    margin: auto;
 }
 </style>
