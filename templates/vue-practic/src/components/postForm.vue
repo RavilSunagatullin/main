@@ -12,10 +12,8 @@
                 v-model="post.body">
             </MyInput>
             <MyButton 
-                class="btn" 
-                style=" align-self: flex-end; 
-                        margin-top: 10px;"
-                @click="createPost">let` go
+                class="btn let-btn" 
+                @click="createPost">let` start
             </MyButton>
         </form>
     </div>
@@ -60,5 +58,8 @@ form{
     color:#E1E2E2;
     border: 1px solid #E1E2E2;
 }
-
+.let-btn{
+    align-self: flex-end; 
+    margin-top: 10px;
+}
 </style>

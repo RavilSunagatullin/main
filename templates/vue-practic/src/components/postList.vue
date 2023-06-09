@@ -5,7 +5,7 @@
     </div>
 
     <div v-else class="container">
-        <h2  style="color:#E1E2E2; padding-top: 10px;">Posts list is null</h2>
+        <h2>Posts list is null</h2>
     </div>
     
 </template>
@@ -27,4 +27,8 @@ import postItem from "@/components/postItem.vue"
 </script>
 
 <style scoped>
+h2{
+    color:#E1E2E2;
+    padding-top: 10px;
+}
 </style>

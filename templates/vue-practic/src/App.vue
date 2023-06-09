@@ -1,11 +1,9 @@
 <template>
     <div class="app">
         <div class="app__btns">
-            <MyButton
+            <MyButton class="orange-btn"
                 @click="showDialog"
-                style= "color: #FB8122;
-                        border: 1px solid #FB8122;
-                        font-weight: 700;">
+                >
                 create post
             </MyButton>
             <MySelector
@@ -24,8 +22,25 @@
             v-if="!isPostsLoading"
          />
         
-        <div v-else class="container">
-            <div >Loading...</div>
+        <div v-else class="container container-for-spin">
+            <div class="container-spin">
+                <div class="block"></div>
+                <div class="block"></div>
+                <div class="block"></div>
+                <div class="block"></div>
+                <div class="block"></div>
+                <div class="block"></div>
+                <div class="block"></div>
+                <div class="block"></div>
+                <div class="block"></div>
+                <div class="block"></div>
+                <div class="block"></div>
+                <div class="block"></div>
+                <div class="block"></div>
+                <div class="block"></div>
+                <div class="block"></div>
+                <div class="block"></div>
+            </div>
         </div>
     </div>
 </template>
@@ -69,10 +84,13 @@
                 try {
                     this.isPostsLoading = true
                     setTimeout(async() => {
-                        const response = await axios.get('https://jsonplaceholder.typicode.com/posts?_limit=7')
+                        let min = Math.ceil(3);
+                        let max = Math.floor(9);
+                        let result = Math.floor(Math.random() * (max - min)) + min;
+                        const response = await axios.get(`https://jsonplaceholder.typicode.com/posts?_limit=${result}`) 
                         this.posts = response.data
                         this.isPostsLoading = false
-                    }, 150);
+                    },750);
                     
                 } catch (e) {
                     alert('Warning')
@@ -116,6 +134,7 @@
 }
 .app{
     padding: 20px;
+    min-height: 100vh;
 }
 .app__btns{
     display: flex;
@@ -129,5 +148,44 @@
     flex-direction: column;
     max-width: 1280px;
     margin: auto;
+}
+.orange-btn{
+    color: #FB8122;
+    border: 1px solid #FB8122;
+    font-weight: 700;
+}
+.container-for-spin{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+}
+.container-spin {
+  width: 80px;
+  height: 100px;
+  margin: auto;
+  /* align-items: center; */
+
+}
+
+.block {
+  position: relative;
+  box-sizing: border-box;
+  float: left;
+  margin: 0 10px 10px 0;
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+  background: #FFF;
+}
+
+.block:nth-child(4n+1) { animation: wave 1s ease .0s infinite; }
+.block:nth-child(4n+2) { animation: wave 1s ease .1s infinite; }
+.block:nth-child(4n+3) { animation: wave 1s ease .2s infinite; }
+.block:nth-child(4n+4) { animation: wave 1s ease .3s infinite; margin-right: 0; }
+
+@keyframes wave {
+  0%   { top: 0;     opacity: 1; }
+  50%  { top: 30px;  opacity: .2; }
+  100% { top: 0;     opacity: 1; }
 }
 </style>
