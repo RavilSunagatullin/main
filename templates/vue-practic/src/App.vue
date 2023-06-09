@@ -10,6 +10,7 @@
                 v-model="selectedSort"
                 :options="sortOptions"
             />
+            
         </div>
         <MyDialog v-model:show="dialogVisible">
             <postForm
@@ -42,6 +43,20 @@
                 <div class="block"></div>
             </div>
         </div>
+        
+        <div ref="observer" class="observer"></div>
+        <!-- вынести в отдельный компонент но будет бескоонечная загрузка -->
+        <!-- <div class="page__wrapper"> 
+            <div 
+                v-for="pageNumber in totalPages" 
+                :key="pageNumber"
+                class="page"
+                :class="{'current-page': page === pageNumber}"
+                @click="changePage(pageNumber)"
+                > {{ pageNumber }}
+                
+            </div>
+        </div> -->
     </div>
 </template>
 
@@ -61,6 +76,9 @@
                 dialogVisible: false,
                 isPostsLoading:false,
                 selectedSort:"",
+                page: 1,
+                limit: 10,
+                totalPages:0,
                 sortOptions : [
                     {value: 'title', name: 'by named'},
                     {value: 'body', name: 'by content'}
@@ -80,14 +98,22 @@
             showDialog(){
                 this.dialogVisible = true;
             },
+            // changePage(pageNumber){ 
+            //     this.page = pageNumber
+            //     // this.fetchPosts()
+            // },
             async fetchPosts(){
                 try {
                     this.isPostsLoading = true
                     setTimeout(async() => {
-                        let min = Math.ceil(3);
-                        let max = Math.floor(9);
-                        let result = Math.floor(Math.random() * (max - min)) + min;
-                        const response = await axios.get(`https://jsonplaceholder.typicode.com/posts?_limit=${result}`) 
+                        const response = await axios.get(`https://jsonplaceholder.typicode.com/posts`, {
+                            params:{
+                                _page: this.page,
+                                _limit:this.limit
+                            }
+
+                        }) 
+                        this.totalPages =  Math.ceil(response.headers['x-total-count'] / this.limit)
                         this.posts = response.data
                         this.isPostsLoading = false
                     },750);
@@ -98,11 +124,46 @@
                 // finally { //надо так при работе с сервером
                 //     this.isPostsLoading = false
                 // }
+            },
+            async loadMorePosts(){
+                try {
+                    this.page += 1
+                    setTimeout(async() => {
+                        const response = await axios.get(`https://jsonplaceholder.typicode.com/posts`, {
+                            params:{
+                                _page: this.page,
+                                _limit:this.limit
+                            }
+
+                        }) 
+                        this.totalPages =  Math.ceil(response.headers['x-total-count'] / this.limit)
+                        this.posts = [...this.posts, ...response.data]
+                        this.isPostsLoading = false
+                    },150);
+                    
+                } catch (e) {
+                    alert('Warning')
+                } 
+                // finally { //надо так при работе с сервером
+                //     this.isPostsLoading = false
+                // }
             }
+
 
         },
         mounted(){
             this.fetchPosts()
+            const options = {
+                rootMargin: '0px',
+                threshould: 1.0
+            }
+            const callback = (entries, observer) =>{
+                if(entries[0].isIntersecting && this.page<this.totalPages){
+                   this.loadMorePosts()
+                }
+            }
+            const observer = new IntersectionObserver(callback, options)
+            observer.observe( this.$refs.observer)
         },
 
         // computed:{ //переделка  watch + надо заменить в post list массив на sortedPosts
@@ -113,9 +174,10 @@
         watch: { 
             selectedSort(newValue) {
                 this.posts.sort((post1, post2) => {
+                    console.log(post1[newValue]?.localeCompare(post2[newValue]))
                     return post1[newValue]?.localeCompare(post2[newValue])
                 })
-            }
+            },
         },
 
 
@@ -175,7 +237,7 @@
   width: 12px;
   height: 12px;
   border-radius: 3px;
-  background: #FFF;
+  background: #E1E2E2;
 }
 
 .block:nth-child(4n+1) { animation: wave 1s ease .0s infinite; }
@@ -188,4 +250,28 @@
   50%  { top: 30px;  opacity: .2; }
   100% { top: 0;     opacity: 1; }
 }
+
+
+/* фикс при загрузке в page wrap страницы но кривой*/ 
+    /* лучше сказать что фишка для удобства пользователя */
+    /* position: absolute; 
+    left: 50%;
+    right: 50%;
+    bottom: -21%; */
+/* .page__wrapper{
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+    gap: 10px;
+    
+}
+.page{
+    border: 1px solid #E1E2E2;
+    border-radius:8px;
+    
+    padding: 10px;
+}
+.current-page{
+    border: 2px solid #FB8122;
+} */
 </style>
