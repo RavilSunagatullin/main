@@ -5,7 +5,9 @@
             <div><strong>Decsr:</strong> {{ post.body }}</div>
         </div>
         <div class="post__btns">
-            <MyButton
+            <MyButton 
+            @click="$router.push(`/posts/${post.id}`)">open</MyButton>
+            <MyButton class="delete-btn"
             @click="$emit('remove', post)">delete</MyButton>
         </div>
     </div>
@@ -33,7 +35,13 @@
     align-items: center;
     justify-content: space-between;
 }
+.delete-btn{
+    color: #E1E2E2;
+    border: 1px solid #E1E2E2
+}
 .post__btns{
-    margin-left: 10px;
+    margin-left: 20px;
+    display: flex;
+    gap: 10px;
 }
 </style>

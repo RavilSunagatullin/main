@@ -2,7 +2,9 @@
     <div>
         <form @submit.prevent>
             <h4>generation posts</h4>
-            <MyInput class="input"
+            <MyInput 
+                v-focus
+                class="input"
                 placeholder="title" 
                 v-model="post.title"
                 >

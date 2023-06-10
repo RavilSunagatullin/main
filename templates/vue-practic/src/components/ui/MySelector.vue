@@ -23,7 +23,6 @@
         },
         methods:{
             changeOption(event){
-                console.log(event)
                 this.$emit('update:modelValue', event.target.value)
             }
         }
@@ -35,6 +34,7 @@
     padding: 5px;
     border-radius: 8px;
     color: #E1E2E2;
+    background-color: #1D2228;
     font-weight: 700;
     border: 1px solid #E1E2E2;
 }
