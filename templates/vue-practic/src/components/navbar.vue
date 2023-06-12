@@ -3,6 +3,7 @@
         <h2 @click="$router.push('/')">Post Manager</h2>
         <div class="navbar__btns">
             <MyButton @click="$router.push('/posts')">Posts</MyButton>
+            <!-- <MyButton @click="$router.push('/storage')">storage</MyButton>  -->
             <MyButton @click="$router.push('/about')">About app</MyButton>
         </div>
     </div>

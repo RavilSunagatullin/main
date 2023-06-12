@@ -1,7 +1,8 @@
 <template>
     <div>
-        <h1>post page in develop</h1>
-        <h2>id = {{ $route.params.id }}</h2>
+        <h1>Post page in develop</h1>
+        <h3>Post id = {{ $route.params.id }}</h3>
+        <h3>Differnt information about post</h3>
     </div>
 </template>
 
@@ -12,5 +13,7 @@
 </script>
 
 <style scoped>
-
+h1{
+    padding-bottom: 30px;
+}
 </style>
