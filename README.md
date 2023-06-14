@@ -8,3 +8,4 @@ makests folder - layouts, designs for sites or applications | папка makets 
 templates folder - landing pages or apps | папка templates - лэндинги или приложения
 ----
 folder ui elements - various micro jokes | папка ui elements - различные микро приклы
+---
