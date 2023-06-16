@@ -18,6 +18,7 @@
     background: none;
     color:#FB8122;
     border: 1px solid #FB8122;
+    font-size:inherit;
 
 }
 </style>

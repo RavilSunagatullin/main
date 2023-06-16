@@ -30,6 +30,12 @@
 </script>
 
 <style scoped>
+select {
+	font-family:inherit;
+	font-size:inherit;
+	font-weight:inherit;
+	font-size:100%;
+}
 .selector{
     padding: 5px;
     border-radius: 8px;
