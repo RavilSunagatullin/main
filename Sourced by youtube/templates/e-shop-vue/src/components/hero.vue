@@ -10,7 +10,7 @@
 </template>
 
 <script setup>
-    import heroInfo from './hero-info.vue';
+    import heroInfo from '@/components/hero-info.vue';
 </script>
 
 <style scoped>
@@ -33,7 +33,7 @@
     justify-content: space-between;
 }
 .hero-info__link{
-    color: #2a254b;
+    color: var(--black);
     text-decoration: none;
     background-color: #f9f9f9;
     padding: 16px 32px;
@@ -43,15 +43,15 @@
     text-decoration: underline;
 }
 .hero-info__title{
-    color:#22202e;
+    color:var(--black);
     font-size: 32px;
-    font-family: 'Enso', sans-serif;
+    font-family: var(--clashDisplay);
     font-weight: normal;
     margin-bottom: 20px;
 }
 .hero-info-description{
     font-size: 18px;
-    color: #5b5676;
-    font-family: "Satoshi", sans-serif;
+    color: var(--lightGray);
+    font-family: var(--satoshi);
 }
 </style>

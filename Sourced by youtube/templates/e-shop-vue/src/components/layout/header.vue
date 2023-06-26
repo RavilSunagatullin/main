@@ -4,26 +4,26 @@
             <div class="header-top-search">
                 <img src="/svg/search.svg" alt="">
             </div>
-            <a href="#" class="header-logo">Avion</a>
+            <router-link to="/" class="header-logo">Avion</router-link>
             <div class="header-top-right">
                 <div href="#" class="header-top-right__cart">
-                    <a href="#">
+                    <router-link to="/card">
                         <img src="/svg/cart.svg" alt="">
-                    </a>  
+                    </router-link>  
                 </div>
                 <div href="#" class="header-top-right__user">
-                    <a href="#">
+                    <router-link to="/user">
                         <img src="/svg/user.svg" alt="">
-                    </a>  
+                    </router-link>  
                 </div>
             </div>
         </div>
         <div class="header-menu">
-            <a 
+            <router-link 
                 class="header-menu__link"
-                href="element.path" 
+                :to="element.path" 
                 v-for="(element, i) of menu"
-                :key="i">{{ element.name }}</a>
+                :key="i">{{ element.name }}</router-link>
         </div>
     </header>
 </template>
@@ -78,9 +78,9 @@
     align-items: center;
 }
 .header-logo{
-    font-family: 'Enso', sans-serif;
+    font-family: var(--satoshi);
     font-weight: 400;
-    color: #22202e;
+    color: var(--black);
     text-decoration: none;
     font-size: 24px;
     text-align: center;
@@ -102,7 +102,7 @@
     gap: 22px;
 }
 .header-menu__link{
-    color:#726e8d;
+    color:var(--gray);
     text-decoration: none;
 }
 .header-menu__link:hover{

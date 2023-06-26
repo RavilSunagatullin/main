@@ -5,7 +5,7 @@
                 title="It started with a small idea"
                 description="A global brand with local beginnings, our story begain in a small studio in South London in early 2014"
                 link="View collection"
-                backgrgound="#2a254b"
+                backgrgound="var(--black)"
                 colorTitle="#fff"
                 colorDescription="#fff"
                 colorLink="#4e4d93"
@@ -19,7 +19,7 @@
 </template>
 
 <script setup>
-    import heroInfo from './hero-info.vue';
+    import heroInfo from '@/components/hero-info.vue';
 </script>
 
 <style scoped>

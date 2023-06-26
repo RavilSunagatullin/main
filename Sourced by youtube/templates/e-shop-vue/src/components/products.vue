@@ -14,7 +14,7 @@
 </template>
 
 <script setup>
-    import Product from './product.vue';
+    import Product from '@//components/product.vue';
     import { ref } from 'vue';
 
     const products  = ref([
@@ -59,7 +59,7 @@
   display: block;
   text-align: center;
   margin: 0 auto;
-  color: #2a254b;
+  color: var(--black);
   text-decoration: none;
   background-color: #f9f9f9;
   padding: 16px 32px;

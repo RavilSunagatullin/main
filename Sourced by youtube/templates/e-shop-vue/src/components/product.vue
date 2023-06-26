@@ -1,9 +1,9 @@
 <template>
     <div class="product">
-        <a href="#" >
+        <router-link to="/" >
             <img :src="img" :alt="title" class="product-image">
-        </a>
-        <a href="#" class="product-name">{{ title }}</a>
+        </router-link>
+        <router-link to="/" class="product-name">{{ title }}</router-link>
         <span class="product-price">£ {{ price }}</span>
     </div>
 </template>
@@ -37,9 +37,9 @@
     margin-bottom: 24px;
 }
 .product-name{
-    font-family: 'Enso', sans-serif;
+    font-family: var(--clashDisplay);
     display: block;
-    color: #2a254b;
+    color: var(--black);
     font-size: 20px;
     line-height: 28px;
     margin-bottom: 8px;
@@ -48,6 +48,6 @@
 .product-price{
     display: block;
     font-size: 18px;
-    color: #2a254b
+    color: var(--black)
 }
 </style>

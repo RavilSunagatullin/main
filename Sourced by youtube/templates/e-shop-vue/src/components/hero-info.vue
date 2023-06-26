@@ -57,7 +57,7 @@
         },
         colorTextLink:{
             type:String,
-            default: '#2a254b'
+            default: 'var(--black)'
         }
 
     })
@@ -74,7 +74,7 @@
     justify-content: space-between;
 }
 .hero-info__link{
-    color: #2a254b;
+    color: var(--black);
     text-decoration: none;
     background-color: #f9f9f9;
     padding: 16px 32px;
@@ -86,15 +86,15 @@
     border:1px solid #CAC6DA;
 }
 .hero-info__title{
-    color:#22202e;
+    color:var(--black);
     font-size: 32px;
-    font-family: 'Enso', sans-serif;
+    font-family: var(--clashDisplay);
     font-weight: normal;
     margin-bottom: 20px;
 }
 .hero-info-description{
     font-size: 18px;
-    color: #5b5676;
-    font-family: "Satoshi", sans-serif;
+    color: var(--lightGray);
+    font-family:var(--satoshi);
 }
 </style>

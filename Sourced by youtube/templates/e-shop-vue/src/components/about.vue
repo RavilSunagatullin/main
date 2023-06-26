@@ -2,8 +2,8 @@
     <div class="about">
         <h3 class="about-title">What makes our brand different</h3>
         <div class="about-elements container--small">
-            <a  
-                href="#"
+            <router-link  
+                :to="element.path"
                 v-for="(element, i) of about"
                 :key="i"
                 class="about-element">
@@ -14,7 +14,7 @@
                 <span class="about-element__description">
                     {{ element.description }}
                 </span>
-            </a>
+            </router-link>
         </div>
     </div>
 </template>
@@ -25,22 +25,26 @@
     {
         img: '/svg/delivery.svg',
         title: 'Next day as standard',
-        description: 'Order before 3pm and get your order the next day as standard'
+        description: 'Order before 3pm and get your order the next day as standard',
+        path:'benefits'
     },
     {
         img: '/svg/checkmark.svg',
         title: 'Made by true artisans',
-        description: 'Handmade crafted goods made with real passion and craftmanship'
+        description: 'Handmade crafted goods made with real passion and craftmanship',
+        path:'benefits'
     },
     {
         img: '/svg/purchase.svg',
         title: 'Unbeatable prices',
-        description: 'For our materials and quality you will not find better prices anywhere'
+        description: 'For our materials and quality you will not find better prices anywhere',
+        path:'benefits'
     },
     {
         img: '/svg/sprout.svg',
         title: 'Recycled packaging',
-        description: 'We use 100% recycled to ensure our footprint is more manageable'
+        description: 'We use 100% recycled to ensure our footprint is more manageable',
+        path:'benefits'
     },
    ]
 </script>
@@ -52,9 +56,9 @@
 .about-title{
     text-align: center;
     font-size: 24px;
-    color:#2A254B;
+    color:var(--black);
     margin: 0 0 84px 0;
-    font-family: 'Enso', sans-serif;
+    font-family: var(--clashDisplay);
 }
 .about-elements{
     display: grid;
@@ -69,14 +73,14 @@
     padding: 48px;
     background-color: #f9f9f9;
     text-decoration: none;
-    color: #2A254B;
+    color: var(--black);
 }
 .about-element img{
     margin-bottom: 12px;
 }
 .about-element__title{
     margin-bottom: 12px;
-    font-family: 'Enso', sans-serif;
+    font-family: var(--clashDisplay);
     font-size: 20px;
 }
 </style>
