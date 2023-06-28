@@ -9,7 +9,7 @@
                 class="about-element">
                 <img :src="element.img" :alt="element.title">
                 <h4 class="about-element__title">
-                   {{ element.title }}
+                    {{ element.title }}
                 </h4>
                 <span class="about-element__description">
                     {{ element.description }}
@@ -20,33 +20,33 @@
 </template>
 
 <script setup>
-   import { ref } from 'vue';
-   const about = [
-    {
-        img: '/svg/delivery.svg',
-        title: 'Next day as standard',
-        description: 'Order before 3pm and get your order the next day as standard',
-        path:'benefits'
-    },
-    {
-        img: '/svg/checkmark.svg',
-        title: 'Made by true artisans',
-        description: 'Handmade crafted goods made with real passion and craftmanship',
-        path:'benefits'
-    },
-    {
-        img: '/svg/purchase.svg',
-        title: 'Unbeatable prices',
-        description: 'For our materials and quality you will not find better prices anywhere',
-        path:'benefits'
-    },
-    {
-        img: '/svg/sprout.svg',
-        title: 'Recycled packaging',
-        description: 'We use 100% recycled to ensure our footprint is more manageable',
-        path:'benefits'
-    },
-   ]
+    import { ref } from 'vue';
+    const about = [
+        {
+            img: '/svg/delivery.svg',
+            title: 'Next day as standard',
+            description: 'Order before 3pm and get your order the next day as standard',
+            path:'benefits'
+        },
+        {
+            img: '/svg/checkmarkDark.svg',
+            title: 'Made by true artisans',
+            description: 'Handmade crafted goods made with real passion and craftmanship',
+            path:'benefits'
+        },
+        {
+            img: '/svg/purchase.svg',
+            title: 'Unbeatable prices',
+            description: 'For our materials and quality you will not find better prices anywhere',
+            path:'benefits'
+        },
+        {
+            img: '/svg/sprout.svg',
+            title: 'Recycled packaging',
+            description: 'We use 100% recycled to ensure our footprint is more manageable',
+            path:'benefits'
+        },
+    ]
 </script>
 
 <style scoped>

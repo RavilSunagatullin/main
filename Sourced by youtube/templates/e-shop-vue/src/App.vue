@@ -1,16 +1,16 @@
 <template>
   <div class="container">
-  <router-view/>
+    <Header/>
+    <router-view/>
+    <Footer/>
   </div>
 </template>
 
 <script setup>
-  
+  import Header from '@/components/layout/header.vue';
+  import Footer from '@/components/layout/footer.vue';
 </script>
 
 <style>
-  /* подключены но не работают, через cdn норм было */
-  /* font-family: 'Satoshi-Regular'; */
-  /* font-family: 'ClashDisplay-Regular'; */
   @import url('/src/assets/style/global.css');
 </style>

@@ -1,22 +1,25 @@
 <template>
     <div class="container">
-      <Header/>
+
       <Hero/>
       <About/>
       <Products/>
       <Ideas/>
+      <Subscribe/>
+      
     </div>
-  </template>
+</template>
   
-  <script setup>
-    import Header from '@/components/layout/header.vue';
+<script setup>
+
     import Hero from '@/components/hero.vue';
     import About from '@/components/about.vue'
     import Products from '@/components/products.vue';
     import Ideas from '@/components/ideas.vue'
-  </script>
+    import Subscribe from '@/components/Subscribe.vue'
+    
+</script>
   
-  <style>
-  
-  </style>
-  
+<style>
+
+</style>

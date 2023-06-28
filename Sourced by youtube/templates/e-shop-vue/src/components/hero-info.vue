@@ -1,31 +1,29 @@
 <template>
-     <div 
-        class="hero-info"
-        :style="{backgroundColor: backgrgound}">
-        <div class="hero-info__text">
-            <h2 
-                class="hero-info__title"
-                :style="{color: colorTitle}">
-                {{ title }}
-            </h2>
-            <span 
-                class="hero-info-description"
-                :style="{color: colorDescription}">
-            {{ description }}
-            </span>
-        </div>
-        <a 
-            :href="link" 
-            class="hero-info__link"
-            :style="{
-                backgroundColor: colorLink,
-                color: colorTextLink }">
-            {{ link }}</a>
-     </div>
+    <div 
+    class="hero-info"
+    :style="{backgroundColor: backgrgound}">
+    <div class="hero-info__text">
+        <h2 
+            class="hero-info__title"
+            :style="{color: colorTitle}">
+            {{ title }}
+        </h2>
+        <span 
+            class="hero-info-description"
+            :style="{color: colorDescription}">
+        {{ description }}
+        </span>
+    </div>
+    <uiButton 
+        :color="colorLink || 'secondary'" 
+        type="link" 
+        :to="path">{{ link }}</uiButton>
+    </div>
     
 </template>
 
 <script setup>
+    import uiButton from '@/components/ui/button.vue';
     const props = defineProps({
         title: {
             type:String,
@@ -53,13 +51,12 @@
         },
         colorLink:{
             type:String,
-            default: '#f9f9f9'
+            required: false
         },
-        colorTextLink:{
+        path:{
             type:String,
-            default: 'var(--black)'
-        }
-
+            required: false
+        },
     })
 </script>
 
@@ -72,18 +69,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-}
-.hero-info__link{
-    color: var(--black);
-    text-decoration: none;
-    background-color: #f9f9f9;
-    padding: 16px 32px;
-    max-width: 172px;
-    border: 1px solid transparent;
-}
-.hero-info__link:hover{
-    text-decoration: underline;
-    border:1px solid #CAC6DA;
+    align-items:flex-start;
 }
 .hero-info__title{
     color:var(--black);

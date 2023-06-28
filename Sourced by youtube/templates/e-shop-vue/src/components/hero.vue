@@ -4,7 +4,10 @@
             title="Luxury homeware for people who love timeless design quality"
             description="Shop the new Spring 2022 collection today"
             link="View collection"
-            
+            path="/path1"
+            colorTitle="var(--black)"
+            colorDescription="var(--black)"
+            colorLink="lightGray"
         />
     </div>
 </template>

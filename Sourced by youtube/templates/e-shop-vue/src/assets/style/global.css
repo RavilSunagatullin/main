@@ -4,8 +4,8 @@
   --black: #2A254B;
   --gray: #726e8d;
   --lightGray: #5b5676;
-
-
+  --white: #fff;
+  --whiteTransparent:rgba(249,249,249, 0.15);  
 }
 *{
     margin: 0;
