@@ -18,15 +18,12 @@
                 <span class="check-name">Exclusive offers</span>
             </div>
         </div>
-        <form class="subscribe-form">
-            <input type="text" class="text" placeholder="your@email.com">
-            <uiButton :color="'dark'">Sign up</uiButton>
-        </form>
+        <subscribeForm colorButton="dark"/>
     </div>
 </template>
 
 <script setup>
-    import uiButton from '@/components/ui/button.vue';
+    import subscribeForm from '@/components/SubscribeForm.vue'
 </script>
 
 <style scoped>
@@ -64,20 +61,5 @@
 }
 .check-name {
     color: var(--white);
-}
-.subscribe-form{
-    margin: auto;
-    margin-top: 40px;
-}
-.text{
-    height: 56px;
-    width: 354px; 
-    padding: 0 32px;
-    font-size: 16px;
-    border: none;
-}
-.subscribe-form{
-    background: #fff;
-    width: fit-content;
 }
 </style>

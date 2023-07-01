@@ -5,7 +5,8 @@
             {'btn-primary': color === 'primary'}, 
             {'btn-secondary': color === 'secondary'}, 
             {'btn-lightGray': color === 'lightGray'},
-            {'btn-dark': color === 'dark'}]">
+            {'btn-dark': color === 'dark'},
+            {' btn-white': color === 'white'}]">
         <slot/>
     </button>
     <router-link 
@@ -67,5 +68,9 @@
 .btn-dark{
     background-color: var(--black);
     color: var(--white);
+}
+.btn-white{
+    background-color: #fff;
+    color:var(--black)
 }
 </style>

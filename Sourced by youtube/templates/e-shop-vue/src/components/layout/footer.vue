@@ -30,16 +30,27 @@
                     </div>
                 </div>
                 <div class="footer-subscribe">
-
+                    <subscribeForm colorButton="white" bgInput="#4e4d93" colorText="#ffffff"/>
                 </div>
             </div>
-            
+            <div class="footer-bottom">
+                <span class="copyright">
+                    Copyright 2022 Avion LTD
+                </span>
+                <div class="socials">
+                    <router-link to="/" class="socials__link"><img class="social__img" src="/svg/linkedin.svg" alt=""></router-link>
+                    <router-link to="/" class="socials__link"><img class="social__img" src="/svg/facebook.svg" alt=""></router-link>
+                    <router-link to="/" class="socials__link"><img class="social__img" src="/svg/instagram.svg" alt=""></router-link>
+                    <router-link to="/" class="socials__link"><img class="social__img" src="/svg/skype.svg" alt=""></router-link>
+                    <router-link to="/" class="socials__link"><img class="social__img" src="/svg/twitter.svg" alt=""></router-link>
+                </div>
+            </div>
         </div>
     </footer>
 </template>
 
 <script  setup>
-    
+    import subscribeForm from '@/components/SubscribeForm.vue'
 </script>
 
 <style scoped>
@@ -51,15 +62,46 @@
     padding: 58px 82px 25px 82px;
 }
 .footer-top {
+    display: grid;
+    grid-template-columns: 540px 1fr;
+    column-gap: 110px;
+    border-bottom: 1px solid #4e4d93;
+    padding-bottom: 48px;
 }
 .footer-menu {
-}
-.footer-menu-column {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    
 }
 .footer-menu-title {
+    font-size: 16px;
+    display: block;
+    margin-bottom: 12px;
 }
 .footer-menu__link {
+    display: block;
+    color: var(--white);
+    text-decoration: none;
+    font-size: 14px;
+    margin-bottom: 12px;
 }
-.footer-subscribe {
+.footer-menu__link:last-child{
+    margin-bottom: 0;
+}
+.footer-menu__link:hover{
+    text-decoration: underline;
+}
+.footer-bottom {
+    padding-top: 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.copyright {
+    font-size: 14px;
+}
+.socials {
+    display: flex;
+    gap:24px;
 }
 </style>

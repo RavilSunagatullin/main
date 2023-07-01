@@ -34,6 +34,7 @@ html, body {
 }
 .slider__item{
     width: 21vw;
+    margin-top: 15px;
     margin-bottom: calc(var(--index)* 2.6);
     cursor: pointer;
     transition: transform var(--transition);
