@@ -1,15 +1,19 @@
 <template>
     <div class="product">
-        <router-link to="/" >
+        <router-link :to="`/${id}`" >
             <img :src="img" :alt="title" class="product-image">
         </router-link>
-        <router-link to="/" class="product-name">{{ title }}</router-link>
+        <router-link :to="`/${id}`"  class="product-name">{{ title }}</router-link>
         <span class="product-price">£ {{ price }}</span>
     </div>
 </template>
 
 <script setup>
     const props = defineProps({
+        id:{
+            type:String,
+            required: true
+        },
         img: {
             type:String,
             required: true
@@ -35,6 +39,7 @@
 .product-image{
     display: block;
     margin-bottom: 24px;
+    width: 100%;
 }
 .product-name{
     font-family: var(--clashDisplay);

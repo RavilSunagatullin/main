@@ -29,7 +29,6 @@
 
 <style scoped>
 .subscribe-form{
-    background: #fff;
     width: fit-content;
     margin: auto;
     margin-top: 40px;
@@ -40,5 +39,16 @@
     padding: 0 32px;
     font-size: 16px;
     border: none;
+}
+@media (max-width:1188px) {
+    .text{
+        width: auto;
+    }
+}
+@media( max-width: 432px){
+    .subscribe-form{
+        display: flex;
+        flex-direction: column;
+    }
 }
 </style>

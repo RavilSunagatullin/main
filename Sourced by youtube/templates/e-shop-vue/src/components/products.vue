@@ -4,6 +4,7 @@
         <Product
             v-for="product of products" 
             :key="product.id"
+            :id="product.id"
             :img="product.img" 
             :title="product.title"
             :price="product.price"/>
@@ -23,37 +24,18 @@
     import Product from '@//components/product.vue';
     import { ref } from 'vue';
     import uiButton from '@/components/ui/button.vue';
-    const products  = ref([
-    {
-      id: 1,
-      img: '/image/listing4.jpg',
-      title: 'The Dandy chair',
-      price: '250'
-    },
-    {
-      id: 2,
-      img: '/image/listing3.jpg',
-      title: 'Rustic Vase Set',
-      price: '155'
-    },
-    {
-      id: 3,
-      img: '/image/listing2.jpg',
-      title: 'The Silky Vase',
-      price: '125'
-    },
-    {
-      id: 4,
-      img: '/image/listing.jpg',
-      title: 'The Lucy Lamp',
-      price: '399'
-    },
-  ])
+
+    const props =defineProps ({
+      products:{
+        required:true
+      }
+    })
 </script>
 
 <style scoped>
 .product-container{
   margin-bottom: 56px;
+  padding: 5px;
 }
 .products{
     display: grid;
@@ -64,5 +46,10 @@
 .products-link{
   text-align: center;
 }
-
+@media (max-width: 788px) {
+  .products{
+    grid-template-columns: repeat(2, 1fr);
+    place-content: center;
+  }
+}
 </style>

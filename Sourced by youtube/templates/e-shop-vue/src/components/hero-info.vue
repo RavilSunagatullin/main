@@ -1,7 +1,7 @@
 <template>
     <div 
     class="hero-info"
-    :style="{backgroundColor: backgrgound}">
+    :style="{backgroundColor: background, height: height}">
     <div class="hero-info__text">
         <h2 
             class="hero-info__title"
@@ -45,7 +45,7 @@
             type:String,
             default: ''
         },
-        backgrgound: {
+        background: {
             type:String,
             default: '#fff'
         },
@@ -57,15 +57,20 @@
             type:String,
             required: false
         },
+        height:{
+            type:String,
+            required: false
+        },
     })
 </script>
 
 <style scoped>
 .hero-info{
+    margin: 0;
     background-color: #fff;
     padding: 50px 55px;
     max-width: 630px;
-    height: 444px;
+    height:100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -83,4 +88,21 @@
     color: var(--lightGray);
     font-family:var(--satoshi);
 }
+@media (max-width: 882px){
+    .hero-info{
+        padding: 25px 27px;
+    }
+    .hero-info__title{
+        font-size: 24px;
+    }
+    .hero-info-description{
+        font-size: 16px;
+    }
+}
+@media(max-width: 700px){
+    .hero-info{
+        height: 50vh;
+    }
+}
+
 </style>

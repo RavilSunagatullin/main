@@ -16,8 +16,12 @@
                         <img src="/svg/user.svg" alt="">
                     </router-link>  
                 </div>
+                <div class="header-menu-btn" v-show="windowInnerWidth < 650" @click="menuState">
+                    <img src="/svg/burger.svg" alt="">
+                </div>
             </div>
         </div>
+        <!-- v-show="windowInnerWidth > 650" -->
         <div class="header-menu">
             <router-link 
                 class="header-menu__link"
@@ -30,7 +34,8 @@
 
 <script setup>
     import { ref } from 'vue';
-
+    let menuState = false
+    const windowInnerWidth = window.innerWidth
     const menu = [
         {
             name:'Plant pots',
@@ -94,6 +99,9 @@
     align-items: center;
     gap: 16px;
 }
+.header-top-right__cart, .header-top-right__user {
+    height: 16px;
+}
 .header-menu{
     height: 62px;
     display: flex;
@@ -107,5 +115,19 @@
 }
 .header-menu__link:hover{
     text-decoration: underline;
+}
+
+.header-menu-btn img, .header-menu-btn{
+    height: 32px;
+}
+
+
+@media (max-width: 650px){
+    .header-menu,.header-top-right__cart, .header-top-right__user {
+        display: none;
+    }
+    .header{
+        height: 66px;
+    }
 }
 </style>

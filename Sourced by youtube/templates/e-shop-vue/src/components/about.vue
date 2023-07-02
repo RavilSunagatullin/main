@@ -31,7 +31,7 @@
         {
             img: '/svg/checkmarkDark.svg',
             title: 'Made by true artisans',
-            description: 'Handmade crafted goods made with real passion and craftmanship',
+            description: 'Handmade crafted goods made with real passion and craft man ship',
             path:'benefits'
         },
         {
@@ -51,7 +51,7 @@
 
 <style scoped>
 .about{
-    padding: 80px 0 130px 0;
+    padding: 80px 5px 80px 5px;
 }
 .about-title{
     text-align: center;
@@ -82,5 +82,19 @@
     margin-bottom: 12px;
     font-family: var(--clashDisplay);
     font-size: 20px;
+}
+@media (max-width: 1225px){
+    .about-elements{
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 20px;
+        row-gap: 20px;
+    }
+}
+@media (max-width: 435px){
+    .about-elements{
+        grid-template-columns: repeat(1, 1fr);
+        column-gap: 20px;
+        row-gap: 20px;
+    }
 }
 </style>

@@ -62,4 +62,14 @@
 .check-name {
     color: var(--white);
 }
+
+@media (max-width:600px){
+    .subscribe-title{
+        font-size: 24px;
+    }
+    .subscribe-checks{
+        flex-direction: column;
+        align-items: center
+    }
+}
 </style>

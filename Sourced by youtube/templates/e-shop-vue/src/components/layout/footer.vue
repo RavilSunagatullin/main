@@ -15,7 +15,7 @@
                         <span class="footer-menu-title">Categories</span>
                         <router-link to="/" class="footer-menu__link">Crockery</router-link>
                         <router-link to="/" class="footer-menu__link">Furniture</router-link>
-                        <router-link to="/" class="footer-menu__link">Homeware</router-link>
+                        <router-link to="/" class="footer-menu__link">household products</router-link>
                         <router-link to="/" class="footer-menu__link">Plant pots</router-link>
                         <router-link to="/" class="footer-menu__link">Chairs</router-link>
                         <router-link to="/" class="footer-menu__link">Crockery</router-link>
@@ -59,7 +59,7 @@
     color: var(--white);
 }
 .footer-content{
-    padding: 58px 82px 25px 82px;
+    padding: 58px 82px ;
 }
 .footer-top {
     display: grid;
@@ -74,6 +74,7 @@
     
 }
 .footer-menu-title {
+    width: 120px;
     font-size: 16px;
     display: block;
     margin-bottom: 12px;
@@ -103,5 +104,31 @@
 .socials {
     display: flex;
     gap:24px;
+}
+@media (max-width:1288px){
+    .footer-top{
+        column-gap: 10px
+    }
+}
+@media (max-width: 1069px){
+    .footer-top{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: auto;
+    }
+    .footer-menu{
+        place-items: center;
+        align-items: start
+    }
+    .footer-content{
+        padding: 29px 41px;
+    }
+}
+@media (max-width: 550px) {
+    .footer-menu {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 20px;
+    }
 }
 </style>
