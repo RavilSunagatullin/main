@@ -10,6 +10,19 @@ export default {
     async getPopularProducts(){
         try {
             const response = await http.get('/products/popular')
+            return response.data
+        }
+        catch (e){
+            console.log(e)
+        }
+    },
+    async getProduct(id) {
+        try{
+            const response = await http.get(`/products/${id}`, {
+                headers: {
+                    Prefer: `code=200, example=Example ${id}`,
+                }
+            })
             console.log(response.data)
             return response.data
         }
