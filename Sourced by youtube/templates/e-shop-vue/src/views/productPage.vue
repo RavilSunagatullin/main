@@ -1,5 +1,6 @@
 <template>
     <div>
+        <h1  style="padding: 15px;">in develop</h1>
         <productDetail :product="currentProduct"/>
     </div>
 </template>

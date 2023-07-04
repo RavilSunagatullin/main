@@ -1,6 +1,8 @@
 <template>
     <div class="product">
-        <div>img</div>
+        <div>
+            <img :src="product.image" :alt="product.name">
+        </div>
         <div>description</div>
     </div>
 </template>
@@ -9,18 +11,17 @@
     const props = defineProps({
         product: {
             type: Object,
-            default: () => {
-
-            },
+            default: () => {},
             required:  true
         }
     })
+    
 </script>
 
 <style scoped>
     .product{
+        padding: 50px 80px;
         background-color: #f9f9f9;
-        padding: 50px  0;
         display: grid;
         grid-template-columns: 1fr 500px;
         column-gap: 65px;
