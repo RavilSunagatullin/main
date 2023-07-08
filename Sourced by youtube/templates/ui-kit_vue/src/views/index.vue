@@ -1,6 +1,6 @@
 <template>
     <div>
-        <a>gl hf</a>
+        <h1 class="heading-1">Hello</h1>
     </div>
 </template>
 
