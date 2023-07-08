@@ -34,7 +34,7 @@ const toggleMenu = () => {
     position: fixed
     left: 0
     width: 15px
-    background-color: var(--primary-color)
+    background-color: var(--primary)
     height: 100%
     top: 62px
     z-index: 1
@@ -43,6 +43,7 @@ const toggleMenu = () => {
     display: flex
     align-items: center
     justify-content: center
+
 
 @media screen and (max-width:1023px)
     .content

@@ -20,12 +20,12 @@
 
     const links =  ref([
         {
-            name:'Typography',
-            href:  '/typography'
-        },
-        {
             name:'Button',
             href:'/button'
+        },
+        {
+            name:'Typography',
+            href:  '/typography'
         },
     ])
 </script>
@@ -39,7 +39,7 @@
     position: fixed
     width: 250px
     padding: 20px
-    transition: all 0.15s linear
+    transition: all 0.2s ease
     box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.07)
     transform: translateX(-250px)
     &__open
@@ -53,7 +53,7 @@
         font-weight: bold
         margin-bottom: 10px
         &:hover
-            border-color: var(--primary-color)
+            border-color: var(--primary)
     
     
 </style>
