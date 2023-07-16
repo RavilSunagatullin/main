@@ -1,7 +1,7 @@
 <template>
     <div :class="['sidebar', {sidebar__open: openSidebar}]" >
         <router-link 
-            class="sidebar__link"
+            class="sidebar__link "
             v-for="link in links" 
             :key="link.name"
             :to="link.href">{{ link.name }}</router-link>
@@ -27,6 +27,10 @@
             name:'Typography',
             href:  '/typography'
         },
+        {
+            name:'Checkbox',
+            href:  '/checkbox'
+        },
     ])
 </script>
 
@@ -40,20 +44,21 @@
     width: 250px
     padding: 20px
     transition: all 0.2s ease
-    box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.07)
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.07)
     transform: translateX(-250px)
     &__open
         transform: translateX(0)
     &__link
         display: block
         border-radius: 12px
-        padding: 10px
         border: 2px solid #fff
-        transition: all 0.2s
-        font-weight: bold
+        transition: all 0.2s        
+        font-weight: 400
+        font-size: 20px
         margin-bottom: 10px
+        color: inherit
         &:hover
-            border-color: var(--primary)
+            color: var(--primary)
     
     
 </style>

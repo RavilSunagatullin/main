@@ -10,6 +10,8 @@
 
 <style lang="sass" scoped>
 .header
+    position: fixed
+    width: 100%
     background: #fff
     font-weight: bold
     padding: 0 20px
@@ -18,5 +20,4 @@
     display: flex
     align-items: center
     z-index: 1
-    position: relative
 </style>

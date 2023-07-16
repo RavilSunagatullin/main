@@ -11,30 +11,30 @@
     </div>
     <h2 class="heading-2">Rounded</h2>
     <div class="line">
-        <uiButton label="primary" color="primary" :rounded="true"/>
-        <uiButton label="second" color="second" :rounded="true"/>
-        <uiButton label="success" color="success" :rounded="true"/>
-        <uiButton label="info" color="info" :rounded="true"/>
-        <uiButton label="warning" color="warning" :rounded="true"/>
-        <uiButton label="danger" color="danger" :rounded="true"/>
+        <uiButton label="primary" color="primary" rounded/>
+        <uiButton label="second" color="second" rounded/>
+        <uiButton label="success" color="success" rounded/>
+        <uiButton label="info" color="info" rounded/>
+        <uiButton label="warning" color="warning" rounded/>
+        <uiButton label="danger" color="danger" rounded/>
     </div>
     <h2 class="heading-2">Disable</h2>
     <div class="line">
-        <uiButton label="primary" color="primary" :disable="true"/>
-        <uiButton label="second" color="second" :disable="true"/>
-        <uiButton label="success" color="success" :disable="true"/>
-        <uiButton label="info" color="info" :disable="true"/>
-        <uiButton label="warning" color="warning" :disable="true"/>
-        <uiButton label="danger" color="danger" :disable="true"/>
+        <uiButton label="primary" color="primary" disable/>
+        <uiButton label="second" color="second" disable/>
+        <uiButton label="success" color="success" disable/>
+        <uiButton label="info" color="info" disable/>
+        <uiButton label="warning" color="warning" disable/>
+        <uiButton label="danger" color="danger" disable/>
     </div>
     <h2 class="heading-2">Outline</h2>
     <div class="line">
-        <uiButton label="primary" color="primary" :outline="true"/>
-        <uiButton label="second" color="second" :outline="true"/>
-        <uiButton label="success" color="success" :outline="true"/>
-        <uiButton label="info" color="info" :outline="true"/>
-        <uiButton label="warning" color="warning" :outline="true"/>
-        <uiButton label="danger" color="danger" :outline="true"/>
+        <uiButton label="primary" color="primary" outline/>
+        <uiButton label="second" color="second" outline/>
+        <uiButton label="success" color="success" outline/>
+        <uiButton label="info" color="info" outline/>
+        <uiButton label="warning" color="warning" outline/>
+        <uiButton label="danger" color="danger" outline/>
     </div>
     <h2 class="heading-2">Icon</h2>
     <div class="line">
@@ -68,8 +68,5 @@
 </script>
 
 <style lang="sass" scoped>
-.line
-    display: flex
-    flex-wrap: wrap
-    margin-bottom: 20px
+
 </style>

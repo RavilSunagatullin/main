@@ -25,8 +25,8 @@ const toggleMenu = () => {
 <style lang="sass" scoped>
 .content
     max-width: 1440px
-    margin-left: 250px
-    padding: 30px
+    margin-left: 230px
+    padding: 70px
     transition: all 0.2s
     &__full
         margin-left: 0
@@ -36,7 +36,6 @@ const toggleMenu = () => {
     width: 15px
     background-color: var(--primary)
     height: 100%
-    top: 62px
     z-index: 1
     cursor: pointer
     color: #fff
