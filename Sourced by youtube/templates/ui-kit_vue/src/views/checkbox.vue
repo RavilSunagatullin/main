@@ -23,11 +23,22 @@
         <h2 class="heading-2">Checkbox group</h2>
         <div class="line line__block">
             <p>Selected checks: {{ selectedCheck }}</p>
-        <CheckboxGroup 
-            :options="listOfChecks" 
-            name="checks" 
-            v-model:value="selectedCheck"
-            />
+            <CheckboxGroup 
+                :options="listOfChecks" 
+                name="checks" 
+                v-model:value="selectedCheck"
+                />
+        </div>
+        <h2 class="heading-2">switch</h2>
+        <div class="line line__block">
+            <p>switch: {{ switchProfessional }}</p>
+            <uiCheckbox
+                label="switch example"
+                id="switchProfessional"
+                name="switchProfessional"
+                value="switchProfessional"
+                type="switch"
+                v-model:checked="switchProfessional"/>
         </div>
     </div>
 </template>
@@ -48,6 +59,8 @@ const listOfChecks = ref([
     {name: 'Fourth check',id: 'Check-4'},
 ])
 const selectedCheck = ref(['Check-1'])
+
+const switchProfessional = ref(false)
 </script>
 
 <style lang="sass" scoped>

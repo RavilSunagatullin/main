@@ -20,16 +20,20 @@
 
     const links =  ref([
         {
+                name:'Typography',
+                href:  '/typography'
+        },    
+        {
             name:'Button',
             href:'/button'
         },
         {
-            name:'Typography',
-            href:  '/typography'
-        },
-        {
             name:'Checkbox',
             href:  '/checkbox'
+        },
+        {
+            name:'Radio button',
+            href:  '/radio-button'
         },
     ])
 </script>
@@ -46,9 +50,11 @@
     transition: all 0.2s ease
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.07)
     transform: translateX(-250px)
+    z-index: 10
     &__open
         transform: translateX(0)
     &__link
+        padding-left: 10px
         display: block
         border-radius: 12px
         border: 2px solid #fff
