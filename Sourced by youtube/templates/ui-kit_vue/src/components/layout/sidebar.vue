@@ -31,9 +31,14 @@
             name:'Checkbox',
             href:  '/checkbox'
         },
+        // progress
         {
             name:'Radio button',
             href:  '/radio-button'
+        },
+        {
+            name:'Progress bar',
+            href:  '/progress-bar'
         },
     ])
 </script>
@@ -46,7 +51,7 @@
     background: #fff
     position: fixed
     width: 250px
-    padding: 20px
+    padding: 30px
     transition: all 0.2s ease
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.07)
     transform: translateX(-250px)

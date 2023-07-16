@@ -33,7 +33,7 @@ const toggleMenu = () => {
 .sidebar-toggle
     position: fixed
     left: 0
-    width: 15px
+    width: 20px
     background-color: var(--primary)
     height: 100%
     z-index: 11
