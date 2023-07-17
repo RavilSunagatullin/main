@@ -5,6 +5,7 @@ import button from '@/views/button.vue'
 import checkbox from '@/views/checkbox.vue'
 import radioButton from '@/views/radioButton.vue'
 import progress from '@/views/progress.vue'
+import input from '@/views/input.vue'
 
 const router = createRouter({
     history: createWebHistory(),
@@ -38,6 +39,11 @@ const router = createRouter({
             path:'/progress-bar',
             name: 'progress',
             component: progress
+        },
+        {
+            path:'/input',
+            name: 'input',
+            component: input
         },
 
     ]

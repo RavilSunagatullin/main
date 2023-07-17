@@ -31,7 +31,6 @@
             name:'Checkbox',
             href:  '/checkbox'
         },
-        // progress
         {
             name:'Radio button',
             href:  '/radio-button'
@@ -39,6 +38,10 @@
         {
             name:'Progress bar',
             href:  '/progress-bar'
+        },
+        {
+            name:'Input',
+            href:  '/input'
         },
     ])
 </script>
