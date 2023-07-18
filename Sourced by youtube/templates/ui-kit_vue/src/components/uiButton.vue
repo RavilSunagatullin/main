@@ -55,7 +55,7 @@
 
 <style lang="sass" scoped>
 .btn
-    margin-right: 10px
+    // margin-right: 10px
     margin-bottom: 10px
     padding: 0 20px
     height: 40px

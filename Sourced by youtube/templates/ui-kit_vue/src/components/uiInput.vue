@@ -1,5 +1,5 @@
 <template>
-    <div class="form-input" :style="{'width': width}">
+    <div class="form-input" >
         <input 
             class="input-text"
             :type="type" 
@@ -40,10 +40,6 @@
             type:String,
             required: true
         },
-        width:{
-            type:String,
-            default:'300px'
-        },
         error:{
             type:Array,
             required: false
@@ -58,8 +54,9 @@
 <style lang="sass" scoped>
 .form 
     &-input 
-        margin-bottom: 30px
+        margin-top: 30px
         position: relative
+        max-width: 300px
     &-error 
         background: var(--danger)
         margin-top: 4px

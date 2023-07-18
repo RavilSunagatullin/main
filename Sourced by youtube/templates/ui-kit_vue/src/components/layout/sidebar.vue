@@ -43,6 +43,10 @@
             name:'Input',
             href:  '/input'
         },
+        {
+            name:'Tabs',
+            href:  '/tabs'
+        },
     ])
 </script>
 

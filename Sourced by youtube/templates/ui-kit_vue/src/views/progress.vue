@@ -5,10 +5,12 @@
         <div class="line line__block">
             <uiProgress
                 :percent="percentBar"/>
-            <uiButton
-                label="add 15%" @click="addPercentBar(15)"/>
-            <uiButton
-                label="remove 10%" @click="removePercentBar(10)" />
+            <div class="line">
+                <uiButton
+                    label="add 15%" @click="addPercentBar(15)"/>
+                <uiButton
+                    label="remove 10%" @click="removePercentBar(10)" />
+            </div>
         </div>
         <h2 class="heading-2">Position start</h2>
         <div class="line line__block">
