@@ -7,6 +7,7 @@ import radioButton from '@/views/radioButton.vue'
 import progress from '@/views/progress.vue'
 import input from '@/views/input.vue'
 import tabs from '@/views/tabs.vue'
+import table from '@/views/table.vue'
 
 const router = createRouter({
     history: createWebHistory(),
@@ -50,6 +51,11 @@ const router = createRouter({
             path:'/tabs',
             name: 'tabs',
             component: tabs
+        },
+        {
+            path:'/table',
+            name: 'table',
+            component: table
         },
 
     ]

@@ -47,6 +47,10 @@
             name:'Tabs',
             href:  '/tabs'
         },
+        {
+            href:'/table',
+            name: 'Table',
+        },
     ])
 </script>
 
