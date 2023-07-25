@@ -13,7 +13,6 @@
             @input="handleClick($event)">
         <label :for="id">{{ label }}</label>
         <label :for="id" class="switch__label" v-if="type==='switch'">{{ label }}</label>
-        <!--   -->
     </div>
 </template>
 
