@@ -1,27 +1,32 @@
 <template>
-    <!-- <div class="movie">
+    <div class="movie">
         <img 
             :src="`https://image.tmdb.org/t/p/w300_and_h450_bestv2${movie.poster_path}`" 
             :alt="movie.original_title"
             class="movie-img">
-    </div> -->
-    <div class="movie-name">
-        {{ movie.original_title }} ({{ movie.release_date }})
+        <div class="">
+            <div class="movie-name">
+                {{ movie.original_title }} ({{ movie.release_date }})
+            </div>
+            <span class="movie-overview">{{ movie.overview }}</span>
+            <div class="movie-buttons">
+                <button class="btn movie-buttons-watched" @click="movieStore.toggleWatch(movie.id)">
+                    <span v-if="!movie.isWatched">Watched</span>
+                    <span v-else>Unwatched</span>
+                </button>
+                <button class="btn movie-buttons-delete" @click="movieStore.deleteMovie(movie.id)">
+                    <span>Delete</span>
+                </button>
+            </div>
+        </div>
     </div>
-    <span class="movie-overview">{{ movie.overview }}</span>
-    <div class="movie-buttons">
-        <button class="btn movie-buttons-watched">
-            <span v-if="!movie.isWatched">Watched</span>
-            <span v-else>Unwatched</span>
-        </button>
-        <button class="btn movie-buttons-delete">
-            <span>Delete</span>
-        </button>
-    </div>
+    
         
 </template>
 
 <script setup>
+    import { useMovieStore } from '../stores/movie-store';
+    const movieStore = useMovieStore()
     const props = defineProps({
         movie: {
             type: Object,
@@ -49,6 +54,7 @@
     height: 200px;
     object-fit: cover;
     border-radius: 50%;
+    background-color: #1eb4c3; /* костыль*/
 }
 .movie-name {
     display: flex;
