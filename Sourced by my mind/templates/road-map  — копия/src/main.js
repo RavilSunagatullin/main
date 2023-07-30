@@ -17,17 +17,6 @@ const pinia = createPinia();
 
 import router from "./router/router.js";
 
-import { library } from "@fortawesome/fontawesome-svg-core";
-import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
-import {
-  faSun,
-  faPaperPlane,
-  faCheck,
-  faHeart,
-} from "@fortawesome/free-solid-svg-icons";
-
-library.add([faSun, faPaperPlane, faCheck, faHeart]);
-
 createApp(App, {
   setup() {
     const { t } = useI18n();
@@ -37,5 +26,4 @@ createApp(App, {
   .use(i18n)
   .use(pinia)
   .use(router)
-  .component("font-awesome-icon", FontAwesomeIcon)
   .mount("#app");
