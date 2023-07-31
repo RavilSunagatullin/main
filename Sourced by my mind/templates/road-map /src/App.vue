@@ -1,21 +1,41 @@
 <template>
   <div class="container">
-    <!-- <uiLink to="test" label="to test" /> -->
-    <transition name="transition-route">
-      <router-view></router-view>
-    </transition>
+    <div class="wrapper">
+      <uiHeader />
+      <div class="content">
+        <!-- <transition name="transition-route"> -->
+        <router-view></router-view>
+
+        <!-- </transition> -->
+      </div>
+      <div class="footer">
+        <uiFooter />
+      </div>
+    </div>
   </div>
 </template>
 
 <script setup>
-import { ref } from "vue";
 import { useStore } from "@/store/store";
 const store = useStore();
 
-import uiLink from "@/components/atoms/uiLink.vue";
+import uiHeader from "@/components/molecules/uiHeader.vue";
+import uiFooter from "@/components/molecules/uiFooter.vue";
 </script>
 
 <style lang="sass">
+.wrapper
+    display: flex
+    flex-direction: column
+    justify-content: center
+    margin: 0 auto
+    height: 100vh
+.content
+    flex: 1 0 auto
+    margin: 0 auto
+
+.footer
+    flex: 0 0 auto
 .container
   max-width: 1110px
   margin: 0 auto
@@ -29,19 +49,4 @@ import uiLink from "@/components/atoms/uiLink.vue";
   &__black
     background-color: #333333
     color: #ffffff
-// .transition-route-enter-active,
-// .transition-route-leave-active
-//   transition: all 0.2s ease-in
-
-// .transition-route-enter-from,
-// .transition-route-leave-to
-//   opacity: 0
-
-// .transition-route-enter-to,
-// .transition-route-leave-from
-//   opacity: 1
-.v-enter-active,.v-leave-active
-    transition: opacity 0.5s ease
-.v-enter-from,.v-leave-to
-    opacity: 0
 </style>

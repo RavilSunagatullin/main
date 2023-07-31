@@ -8,8 +8,8 @@
   >
     <div class="footer__right">
       <uiLink label="GitHub" to="/github" />
-      <uiLink label="Author" to="/author" />
-      <uiLink label="About us" to="/about" />
+      <uiLink :label="$t('author')" to="/author" />
+      <uiLink :label="$t('about')" to="/about" />
     </div>
     <div class="footer__center" v-if="isMobile">
       <uiSwitch
@@ -28,7 +28,7 @@
       />
     </div>
     <div class="footer__left">
-      <uiInput label="label" placeholder="label" />
+      <uiInput label="In dev" placeholder="In dev" />
     </div>
   </footer>
 </template>
@@ -38,7 +38,7 @@ import { useStore } from "@/store/store";
 const store = useStore();
 
 import { useI18n } from "vue-i18n";
-const { t } = useI18n({ useScope: "global" });
+const { t, locale } = useI18n({ useScope: "global" });
 
 import { ref, watch } from "vue";
 import uiSwitch from "@/components/atoms/uiSwitch.vue";
@@ -46,11 +46,21 @@ import uiLink from "@/components/atoms/uiLink.vue";
 import uiInput from "@/components/atoms/uiInput.vue";
 
 const switchColor = ref(true);
-const switchLang = ref("en");
+const switchLang = ref(true);
 
 watch(switchColor, () => {
   switchColor: {
     store.switchColorTheme();
+  }
+});
+
+watch(switchLang, () => {
+  switchLang: {
+    if (locale.value === "en") {
+      locale.value = "ru";
+    } else {
+      locale.value = "en";
+    }
   }
 });
 

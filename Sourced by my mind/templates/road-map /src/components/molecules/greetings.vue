@@ -1,9 +1,10 @@
 <template>
   <div class="greetings">
     <h1 class="heading-1">Road.map()</h1>
-    <h3 class="heading-3">Simple service for learning programming</h3>
-    <div class="wrapper">
-      <uiLink to="/main" label="Choose guide" />
+    <h3 class="heading-3">{{ $t("slogan") }}</h3>
+    <div class="wrapper-greeting">
+      <!--  :label="$('choose-guide')"  -->
+      <uiLink to="/main" :label="$t('chooseGuide')" />
     </div>
   </div>
 </template>
@@ -16,7 +17,7 @@ import uiLink from "@/components/atoms/uiLink.vue";
 </script>
 
 <style lang="sass" scoped>
-.wrapper
+.wrapper--greeting
     margin-top: 30px
 .greetings
     margin-top: 145px

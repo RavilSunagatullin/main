@@ -2,8 +2,8 @@ import { defineStore } from "pinia";
 
 export const useStore = defineStore("store", {
   state: () => ({
-    test: 1,
     lightTheme: true,
+    // defaultLocalLang: 'en'
   }),
   getters: {},
   actions: {
@@ -17,5 +17,13 @@ export const useStore = defineStore("store", {
         document.body.classList.remove("bg__white");
       }
     },
+    // switchLang(){
+    //   if(this.defaultLocalLang === 'en') {
+    //     this.defaultLocalLang = 'ru'
+    //   }
+    //   else{
+    //     this.defaultLocalLang = 'en'
+    //   }
+    // }
   },
 });

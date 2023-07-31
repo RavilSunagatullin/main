@@ -8,8 +8,8 @@
   >
     <uiLink label="Road.map()" to="/main" />
     <div class="header__left">
-      <uiLink label="Guides" to="/guides" />
-      <uiLink label="Articles" to="/articles" />
+      <uiLink :label="$t('guides')" to="/guides" />
+      <uiLink :label="$t('articles')" to="/articles" />
       <uiSwitch
         v-if="!isMobile"
         name="Switch-color"
@@ -35,18 +35,27 @@ import { useStore } from "@/store/store";
 const store = useStore();
 
 import { useI18n } from "vue-i18n";
-const { t } = useI18n({ useScope: "global" });
+const { t, locale } = useI18n({ useScope: "global" });
 
 import { ref, watch } from "vue";
 import uiSwitch from "@/components/atoms/uiSwitch.vue";
 import uiLink from "@/components/atoms/uiLink.vue";
 
 const switchColor = ref(true);
-const switchLang = ref("en");
+const switchLang = ref(true);
 
 watch(switchColor, () => {
   switchColor: {
     store.switchColorTheme();
+  }
+});
+watch(switchLang, () => {
+  switchLang: {
+    if (locale.value === "en") {
+      locale.value = "ru";
+    } else {
+      locale.value = "en";
+    }
   }
 });
 
