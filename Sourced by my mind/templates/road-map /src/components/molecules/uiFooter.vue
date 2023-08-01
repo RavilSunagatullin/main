@@ -7,11 +7,13 @@
     ]"
   >
     <div class="footer__right">
-      <uiLink label="GitHub" to="/github" />
+      <a href="https://github.com/RavilSunagatullin">
+        <uiButton label="GitHub" />
+      </a>
       <uiLink :label="$t('author')" to="/author" />
       <uiLink :label="$t('about')" to="/about" />
     </div>
-    <div class="footer__center" v-if="isMobile">
+    <div class="footer__center" v-show="isMobile">
       <uiSwitch
         name="Switch-color"
         id="Switch-color"
@@ -28,7 +30,7 @@
       />
     </div>
     <div class="footer__left">
-      <uiInput label="In dev" placeholder="In dev" />
+      <uiInput label="In dev" placeholder="In dev" name="In dev" />
     </div>
   </footer>
 </template>
@@ -43,6 +45,7 @@ const { t, locale } = useI18n({ useScope: "global" });
 import { ref, watch } from "vue";
 import uiSwitch from "@/components/atoms/uiSwitch.vue";
 import uiLink from "@/components/atoms/uiLink.vue";
+import uiButton from "@/components/atoms/uiButton.vue";
 import uiInput from "@/components/atoms/uiInput.vue";
 
 const switchColor = ref(true);

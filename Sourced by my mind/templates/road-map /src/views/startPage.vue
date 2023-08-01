@@ -1,9 +1,9 @@
 <template>
-  <greetings />
+  <greeting link />
 </template>
 
 <script setup>
-import greetings from "@/components/molecules/greetings.vue";
+import greeting from "@/components/molecules/greeting.vue";
 </script>
 
 <style lang="sass" scoped></style>

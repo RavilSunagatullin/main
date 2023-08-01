@@ -2,8 +2,7 @@
   <div class="greetings">
     <h1 class="heading-1">Road.map()</h1>
     <h3 class="heading-3">{{ $t("slogan") }}</h3>
-    <div class="wrapper-greeting">
-      <!--  :label="$('choose-guide')"  -->
+    <div class="wrapper-greeting" v-show="link">
       <uiLink to="/main" :label="$t('chooseGuide')" />
     </div>
   </div>
@@ -14,6 +13,13 @@ import { useI18n } from "vue-i18n";
 const { t } = useI18n({ useScope: "global" });
 
 import uiLink from "@/components/atoms/uiLink.vue";
+
+const props = defineProps({
+  link: {
+    type: Boolean,
+    default: false,
+  },
+});
 </script>
 
 <style lang="sass" scoped>
@@ -37,8 +43,16 @@ import uiLink from "@/components/atoms/uiLink.vue";
     .greetings
         margin-top: 40px
         gap: 20px
+    .heading-1
+      font-size: 36px
+    .heading-3
+      font-size: 24px
 
 @media (max-width:400px)
     .greetings
       gap: 10px
+    .heading-1
+      font-size: 32px
+    .heading-3
+      font-size: 16px
 </style>

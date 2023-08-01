@@ -29,7 +29,8 @@ import uiFooter from "@/components/molecules/uiFooter.vue";
     flex-direction: column
     justify-content: center
     margin: 0 auto
-    height: 100vh
+    min-height: 100vh
+    height: 100%
 .content
     flex: 1 0 auto
     margin: 0 auto
