@@ -7,7 +7,7 @@
     ]"
   >
     <div class="footer__right">
-      <a href="https://github.com/RavilSunagatullin">
+      <a href="https://github.com/RavilSunagatullin" class="github">
         <uiButton label="GitHub" />
       </a>
       <uiLink :label="$t('author')" to="/author" />

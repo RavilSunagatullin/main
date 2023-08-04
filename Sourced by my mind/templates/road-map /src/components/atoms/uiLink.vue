@@ -28,12 +28,12 @@ const props = defineProps({
 
 <style lang="sass" scoped>
 .link
-    padding: 11px 20px
+    padding: 13px 20px
     border-radius: 7px
     cursor: pointer
     font-size: 15px
     transition: all 0.2s ease
-    height: 40px
+    height: 45px
     &__black
         background: #333333
         border: 1px solid #333333

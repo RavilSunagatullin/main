@@ -18,5 +18,14 @@
   "how-learning-faster": "How learning faster ?",
   "what-is-mobile-develop": "What is Mobile develop ?",
   "which-backend-framework-is-best": "Which Backend framework is best?",
-  "what-dev-ops-developer-doing": "What Dev ops developer doing ?"
+  "what-dev-ops-developer-doing": "What Dev ops developer doing ?",
+  "frontend-page": {
+    "article_1-title": "What is frontend?",
+    "article_2-title": "Base",
+    "article_3-title": "Git",
+    "article_4-title": "Frameworks",
+    "article_5-title": "Other tools",
+    "article_6-title": "Tests",
+    "article_7-title": "Other form web app"
+  }
 }

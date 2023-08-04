@@ -19,63 +19,6 @@ const { t, locale } = useI18n({ useScope: "global" });
 import { useStore } from "@/store/store";
 const store = useStore();
 
-// const article_1 = ref("How learning faster ?");
-// const article_2 = ref("What is Mobile develop ?");
-// const article_3 = ref("Which Backend framework is best?");
-// const article_4 = ref("What Dev ops developer doing ?");
-
-// watch(locale, () => {
-//   locale: {
-//     if (article_1.value === "Как учиться быстрее ?") {
-//       article_1.value = "How learning faster ?";
-//       article_2.value = "What is Mobile develop ?";
-//       article_3.value = "Which Backend framework is best?";
-//       article_4.value = "What Dev ops developer doing ?";
-//       arrayEl[2] = {
-//         article_1: {
-//           title: article_1.value,
-//           to: "/How learning faster ?",
-//         },
-//         article_2: {
-//           title: article_2.value,
-//           to: "/What is Mobile develop ?",
-//         },
-//         article_3: {
-//           title: article_3.value,
-//           to: "/Which Backend framework is best?",
-//         },
-//         article_4: {
-//           title: article_4.value,
-//           to: "/What Dev ops developer doing ?",
-//         },
-//       };
-//     } else {
-//       article_1.value = "Как учиться быстрее ?";
-//       article_2.value = "Что такое мобильная разработка ?";
-//       article_3.value = "Какой backend фреймворк лучший ? ";
-//       article_4.value = "Чем занимаються dev ops разработчики ?";
-//       arrayEl[2] = {
-//         article_1: {
-//           title: article_1.value,
-//           to: "/How learning faster ?",
-//         },
-//         article_2: {
-//           title: article_2.value,
-//           to: "/What is Mobile develop ?",
-//         },
-//         article_3: {
-//           title: article_3.value,
-//           to: "/Which Backend framework is best ?",
-//         },
-//         article_4: {
-//           title: article_4.value,
-//           to: "/What Dev ops developer doing ?",
-//         },
-//       };
-//     }
-//   }
-// });
-
 const arrayEl = [
   {
     frontend: {

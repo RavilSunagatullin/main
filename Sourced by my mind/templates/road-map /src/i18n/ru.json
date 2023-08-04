@@ -18,5 +18,14 @@
   "how-learning-faster": "Как учиться быстрее ?",
   "what-is-mobile-develop": "Что такое мобильная разработка ?",
   "which-backend-framework-is-best": "Какой backend фреймворк лучший ?",
-  "what-dev-ops-developer-doing": "Чем занимаються dev ops разработчики ?"
+  "what-dev-ops-developer-doing": "Чем занимаються dev ops разработчики ?",
+  "frontend-page": {
+    "article_1-title": "Что такое frontend?",
+    "article_2-title": "База",
+    "article_3-title": "Git",
+    "article_4-title": "Фреймворки",
+    "article_5-title": "Остальные инструменты",
+    "article_6-title": "Тесты",
+    "article_7-title": "Остальные формы web приложений"
+  }
 }
