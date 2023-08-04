@@ -6,5 +6,17 @@
   "author": "Автор",
   "about": "О проекте",
   "dev-dir": "Направление разработки",
-  "Technologies": "Технологии"
+  "Technologies": "Технологии",
+  "frontend": "Frontend",
+  "backend": "Backend",
+  "mobile-kotlin": "Mobile kotlin",
+  "mobile swift": "Mobile swift",
+  "vue-js": "Vue Js",
+  "laravel": "Laravel",
+  "Kotlin": "kotlin",
+  "Swift": "swift",
+  "how-learning-faster": "Как учиться быстрее ?",
+  "what-is-mobile-develop": "Что такое мобильная разработка ?",
+  "which-backend-framework-is-best": "Какой backend фреймворк лучший ?",
+  "what-dev-ops-developer-doing": "Чем занимаються dev ops разработчики ?"
 }

@@ -6,5 +6,17 @@
   "author": "Author",
   "about": "About us",
   "dev-dir": "Develop direction",
-  "Technologies": "Technologies"
+  "technologies": "Technologies",
+  "frontend": "Frontend",
+  "backend": "Backend",
+  "mobile-kotlin": "Mobile kotlin",
+  "mobile-swift": "Mobile swift",
+  "vue-js": "Vue Js",
+  "laravel": "Laravel",
+  "Kotlin": "kotlin",
+  "Swift": "swift",
+  "how-learning-faster": "How learning faster ?",
+  "what-is-mobile-develop": "What is Mobile develop ?",
+  "which-backend-framework-is-best": "Which Backend framework is best?",
+  "what-dev-ops-developer-doing": "What Dev ops developer doing ?"
 }

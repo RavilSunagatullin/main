@@ -42,7 +42,6 @@ import uiFooter from "@/components/molecules/uiFooter.vue";
   margin: 0 auto
   padding-left: 15px
   padding-right: 15px
-  font-family: 'JetBrains Mono'
 .bg
   &__white
     background-color: #ffffff

@@ -1,6 +1,6 @@
 <template>
   <div class="div">
-    <titleStrike :title="title" :position="position" />
+    <titleStrike :title="$t(`${title}`)" :position="position" />
     <div :class="['elements', { 'elements-one': one_column }]">
       <div
         :class="[
@@ -13,7 +13,7 @@
         @click="this.$router.push(element.to)"
       >
         <router-link class="link" :to="element.to">{{
-          element.title
+          $t(`${element.title}`)
         }}</router-link>
       </div>
     </div>
@@ -75,9 +75,13 @@ const props = defineProps({
     width: 100%
     transition: all 0.1s ease
     &__white
+        background-color: #333
+        color: white
         border: 1px solid #333
 
     &__black
+        background-color: white
+        color: #333
         border: 1px solid white
     &:hover
         background: #fd3e3e
