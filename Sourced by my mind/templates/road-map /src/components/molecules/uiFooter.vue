@@ -7,13 +7,13 @@
     ]"
   >
     <div class="footer__right">
-      <a href="https://github.com/RavilSunagatullin" >
-        <uiButton label="GitHub" class="github"/>
+      <a href="https://github.com/RavilSunagatullin">
+        <uiButton label="GitHub" class="github" />
       </a>
       <uiLink :label="$t('author')" to="/author" />
       <uiLink :label="$t('about')" to="/about" />
     </div>
-    <div class="footer__center" >
+    <div class="footer__center">
       <uiSwitch
         v-if="isMobile"
         name="Switch-color"

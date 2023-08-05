@@ -22,15 +22,14 @@
         class="tab-inside"
       >
         <span class="title">{{ $t(`${el.title}`) }}</span>
-        <span v-for="descr of el.description" class="tab-inside">{{
-           $t(`${descr}`)
-        }}</span>
-        <!-- <uiButton v-show="el.haveButton === true"  :label="$t(`${el.label}`)"/> -->
-        <uiLink class="tab-link" 
-          v-if="el.haveButton === true" 
-          :label="$t(`${el.label}`)" 
-          :to="el.to" 
-          style="min-width: 100px; padding: 10px 20px"/>
+        <span v-for="descr of el.description">{{ $t(`${descr}`) }}</span>
+        <uiLink
+          class="tab-link"
+          v-if="el.haveButton === true"
+          :label="$t(`${el.label}`)"
+          :to="el.to"
+          style="min-width: 100px; padding: 10px 20px"
+        />
       </div>
     </div>
   </div>
@@ -70,7 +69,7 @@ const props = defineProps({
         display: flex
         flex-direction: column
         gap: 15px
-        margin: auto 0
+        // margin: auto 0
     &-content
         height: 100%
         line-height: 160%
@@ -86,7 +85,6 @@ const props = defineProps({
     &-inside
         display: flex
         flex-direction: column
-        height: 100%
         gap: 15px
     &-link
         min-width: 100px

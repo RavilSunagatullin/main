@@ -3,10 +3,9 @@
     <div class="wrapper">
       <uiHeader />
       <div class="content">
-        <!-- <transition name="transition-route"> -->
-        <router-view></router-view>
-
-        <!-- </transition> -->
+        <transition>
+          <router-view></router-view>
+        </transition>
       </div>
       <div class="footer">
         <uiFooter />
@@ -49,4 +48,9 @@ import uiFooter from "@/components/molecules/uiFooter.vue";
   &__black
     background-color: #333333
     color: #ffffff
+.v-enter-active,.v-leave-active
+  transition: opacity 0.15s ease-in-out
+
+.v-enter-from, .v-leave-to
+  opacity: 0
 </style>

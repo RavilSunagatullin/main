@@ -55,5 +55,4 @@ const props = defineProps({
   .link
     font-size: 13px
     padding: 8px 15px
-
 </style>
