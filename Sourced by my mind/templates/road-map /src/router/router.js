@@ -3,7 +3,9 @@ import test from "@/views/test.vue";
 import startPage from "@/views/startPage.vue";
 import main from "@/views/main.vue";
 import pageNotFound from "@/views/pageNotFound.vue";
-import frontEnd from "@/views/guides/frontend.vue";
+import frontEnd from "@/views/guides/frontend/frontend.vue";
+import base_frontend from "@/views/guides/frontend/base-frontend.vue";
+import html from "@/views/guides/frontend/html.vue";
 
 const router = createRouter({
   history: createWebHistory(),
@@ -27,6 +29,16 @@ const router = createRouter({
       path: "/frontend",
       name: "frontend",
       component: frontEnd,
+    },
+    {
+      path: "/base-frontend",
+      name: "base-frontend",
+      component: base_frontend,
+    },
+    {
+      path: "/html",
+      name: "html",
+      component: html,
     },
     {
       path: "/:pathMatch(.*)*",

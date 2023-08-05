@@ -26,7 +26,7 @@ const data = {
     title: "frontend-page.article_2-title",
     haveButton: true,
     label: "frontend-page.article_2-label",
-    to: "/base",
+    to: "/base-frontend",
     description: {
       paragraph_1: "frontend-page.paragraph_2-1",
       paragraph_2: "frontend-page.paragraph_2-2",

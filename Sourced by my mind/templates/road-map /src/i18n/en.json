@@ -55,5 +55,33 @@
     "paragraph_7-2": "Server-side rendering refers to the process that the service side completes the HTML structure splicing of the page, sends it to the browser, and then binds the status and events for it to become a fully interactive page.",
     "paragraph_7-3": "Progressive Web Apps (PWAs) are websites that are progressively enhanced to function like installed, native apps on supporting platforms, while functioning like regular websites on other browsers.",
     "paragraph_7-4": "A while back, developing a mobile app using JavaScript was impossible. But now JavaScript developers can create mobile and desktop using their knowledge for web development."
+  },
+  "base-frontend": {
+    "article_1-title": "Html",
+    "paragraph_1": "HTML stands for HyperText Markup Language. It is used on the frontend and gives the structure to the webpage which you can style using CSS and make interactive using JavaScript.",
+    "article_1-label": "More about html",
+    "article_2-title": "Css",
+    "paragraph_2": "CSS or Cascading Style Sheets is the language used to style the frontend of any website. CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.",
+    "article_2-label": "More about css",
+    "article_3-title": "JavaScript",
+    "paragraph_3": "JavaScript allows you to add interactivity to your pages. Common examples that you may have seen on the websites are sliders, click interactions, popups and so on.",
+    "article_3-label": "More about JavaScript"
+  },
+  "html": {
+    "article_1-title": "Html anatomy",
+    "paragraph_1": "The main parts of our element are: Start tag, End tag, Content, Element.",
+    "paragraph_1-2": "Start tag: Consists of the element name enclosed in opening and closing angle brackets. The start tag indicates where the element starts or takes effect.",
+    "paragraph_1-3": "End tag: This is the same as the start tag, except that it includes a slash in front of the element name. The closing element indicates where the element ends, in this case where the paragraph ends. Missing a closing tag is one of the most common beginner mistakes and can lead to strange results.",
+    "paragraph_1-4": "Content: This is the content of the element, which in this case is just text.",
+    "paragraph_1-5": "Element: The start tag, end tag, and content together make up an element.",
+    "paragraph_1-6": "Attributes contain additional information about the element that you don't want to show in the actual content. ",
+    "article_2-title": "Semantic HTML",
+    "paragraph_2": "Semantic element clearly describes its meaning to both the browser and the developer. In HTML, semantic element are the type of elements that can be used to define different parts of a web page such as <form>, <table>, <article>, <header>, <footer>, etc.",
+    "article_3-title": "Forms and Validations",
+    "paragraph_3": "Before submitting data to the server, it is important to ensure all required form controls are filled out, in the correct format. This is called client-side form validation, and helps ensure data submitted matches the requirements set forth in the various form controls.",
+    "article_4-title": "Accessibility",
+    "paragraph_4": "Web accessibility means that websites, tools, and technologies are designed and developed in such a way that people with disabilities can use them easily.",
+    "article_5-title": "Basics of SEO",
+    "paragraph_5": "SEO or Search Engine Optimization is the technique used to optimize your website for better rankings on search engines such as Google, Bing etc."
   }
 }
