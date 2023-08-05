@@ -7,14 +7,15 @@
     ]"
   >
     <div class="footer__right">
-      <a href="https://github.com/RavilSunagatullin" class="github">
-        <uiButton label="GitHub" />
+      <a href="https://github.com/RavilSunagatullin" >
+        <uiButton label="GitHub" class="github"/>
       </a>
       <uiLink :label="$t('author')" to="/author" />
       <uiLink :label="$t('about')" to="/about" />
     </div>
-    <div class="footer__center" v-show="isMobile">
+    <div class="footer__center" >
       <uiSwitch
+        v-if="isMobile"
         name="Switch-color"
         id="Switch-color"
         value="Switch-color"
@@ -22,6 +23,7 @@
         v-model:checked="switchColor"
       />
       <uiSwitch
+        v-if="isMobile"
         name="Switch-lang"
         id="Switch-lang"
         value="Switch-lang"
@@ -77,8 +79,12 @@ if (window.innerWidth < 700) {
 </script>
 
 <style lang="sass" scoped>
+.github
+  padding: 13px 20px
+  height: 100%
+  @media (max-width:400px)
+    font-size: 13px
 .footer
-    // margin: 25px auto auto
     display: flex
     width: 100%
     justify-content: space-between

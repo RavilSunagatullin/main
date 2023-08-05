@@ -49,7 +49,7 @@ const clickOnButton = () => {
     cursor: pointer
     font-size: 15px
     transition: all 0.2s ease
-    height: 45px
+    // height: 45px
     &__black
         background: #333333
         border: 1px solid #333333
@@ -70,7 +70,7 @@ const clickOnButton = () => {
     cursor: pointer
     font-size: 15px
     transition: all 0.2s ease
-    height: 45px
+    // height: 45px
     &__black
         border: 1px solid #333333
         background: #fd3e3e

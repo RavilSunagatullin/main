@@ -11,7 +11,7 @@
       <uiLink :label="$t('guides')" to="/guides" />
       <uiLink :label="$t('articles')" to="/articles" />
       <uiSwitch
-        v-show="!isMobile"
+        v-if="!isMobile"
         name="Switch-color"
         id="Switch-color"
         value="Switch-color"
@@ -19,7 +19,7 @@
         v-model:checked="switchColor"
       />
       <uiSwitch
-        v-show="!isMobile"
+        v-if="!isMobile"
         name="Switch-lang"
         id="Switch-lang"
         value="Switch-lang"

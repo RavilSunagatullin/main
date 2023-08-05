@@ -23,9 +23,14 @@
       >
         <span class="title">{{ $t(`${el.title}`) }}</span>
         <span v-for="descr of el.description" class="tab-inside">{{
-          descr
+           $t(`${descr}`)
         }}</span>
-        <uiButton style="max-width: 30%; min-width: 100px" />
+        <!-- <uiButton v-show="el.haveButton === true"  :label="$t(`${el.label}`)"/> -->
+        <uiLink class="tab-link" 
+          v-if="el.haveButton === true" 
+          :label="$t(`${el.label}`)" 
+          :to="el.to" 
+          style="min-width: 100px; padding: 10px 20px"/>
       </div>
     </div>
   </div>
@@ -40,6 +45,7 @@ import { useI18n } from "vue-i18n";
 const { t } = useI18n({ useScope: "global" });
 
 import uiButton from "@/components/atoms/uiButton.vue";
+import uiLink from "@/components/atoms/uiLink.vue";
 
 const selectedTab = ref(1);
 
@@ -80,5 +86,18 @@ const props = defineProps({
     &-inside
         display: flex
         flex-direction: column
+        height: 100%
         gap: 15px
+    &-link
+        min-width: 100px
+        padding: 10px 20px
+        @media (max-width:500px)
+          .tab-link
+            height: 50px
+    @media (max-width:1000px)
+      grid-template-columns: 150px 1fr
+    @media (max-width:600px)
+      display: flex
+      flex-direction: column
+      gap: 15px
 </style>
