@@ -10,7 +10,9 @@
       <a href="https://github.com/RavilSunagatullin">
         <uiButton label="GitHub" class="github" />
       </a>
-      <uiLink :label="$t('author')" to="/author" />
+      <a href="https://vk.com/id497468593">
+        <uiButton :label="$t('author')" class="github" />
+      </a>
       <uiLink :label="$t('about')" to="/about" />
     </div>
     <div class="footer__center">

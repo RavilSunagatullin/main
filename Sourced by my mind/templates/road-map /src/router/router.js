@@ -2,10 +2,15 @@ import { createRouter, createWebHistory } from "vue-router";
 import test from "@/views/test.vue";
 import startPage from "@/views/startPage.vue";
 import main from "@/views/main.vue";
+import article from "@/views/article.vue";
+import guides from "@/views/guides.vue";
+
 import pageNotFound from "@/views/pageNotFound.vue";
 import frontEnd from "@/views/guides/frontend/frontend.vue";
 import base_frontend from "@/views/guides/frontend/base-frontend.vue";
 import html from "@/views/guides/frontend/html.vue";
+import css from "@/views/guides/frontend/css.vue";
+import js from "@/views/guides/frontend/js.vue";
 
 const router = createRouter({
   history: createWebHistory(),
@@ -26,6 +31,16 @@ const router = createRouter({
       component: main,
     },
     {
+      path: "/article",
+      name: "article",
+      component: article,
+    },
+    {
+      path: "/guides",
+      name: "guides",
+      component: guides,
+    },
+    {
       path: "/frontend",
       name: "frontend",
       component: frontEnd,
@@ -39,6 +54,16 @@ const router = createRouter({
       path: "/html",
       name: "html",
       component: html,
+    },
+    {
+      path: "/css",
+      name: "css",
+      component: css,
+    },
+    {
+      path: "/js",
+      name: "js",
+      component: js,
     },
     {
       path: "/:pathMatch(.*)*",

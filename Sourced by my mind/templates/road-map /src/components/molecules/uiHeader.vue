@@ -9,7 +9,7 @@
     <uiLink label="Road.map()" to="/main" />
     <div class="header__left">
       <uiLink :label="$t('guides')" to="/guides" />
-      <uiLink :label="$t('articles')" to="/articles" />
+      <uiLink :label="$t('articles')" to="/article" />
       <uiSwitch
         v-if="!isMobile"
         name="Switch-color"

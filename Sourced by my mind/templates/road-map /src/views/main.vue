@@ -1,8 +1,12 @@
 <template>
   <div class="wrapper-main">
     <greeting />
-    <elements :title="$t('dev-dir')" :elements="arrayEl[0]" />
-    <elements :title="'Technologies'" :elements="arrayEl[1]" position="right" />
+    <elements :title="$t('technologies.dev-dir')" :elements="arrayEl[0]" />
+    <elements
+      :title="'technologies.technologies'"
+      :elements="arrayEl[1]"
+      position="right"
+    />
     <elements :title="$t('articles')" :elements="arrayEl[2]" one_column />
   </div>
 </template>
@@ -22,38 +26,38 @@ const store = useStore();
 const arrayEl = [
   {
     frontend: {
-      title: "frontend",
+      title: "technologies.frontend",
       to: "/frontend",
     },
     backend: {
-      title: "backend",
+      title: "technologies.backend",
       to: "/backend",
     },
     mobileAndroid: {
-      title: "mobile-kotlin",
-      to: "/mobile-kotlin",
+      title: "technologies.kotlin",
+      to: "/kotlin",
     },
     mobileSwift: {
-      title: "mobile-swift",
-      to: "/mobile-swift",
+      title: "technologies.swift",
+      to: "/swift",
     },
   },
   {
     vue: {
-      title: "vue-js",
+      title: "technologies.vue-js",
       to: "/vue-js",
     },
     laravel: {
-      title: "laravel",
+      title: "technologies.laravel",
       to: "/laravel",
     },
     kotlin: {
-      title: "kotlin",
-      to: "/kotlin",
+      title: "technologies.js",
+      to: "/js",
     },
     swift: {
-      title: "swift",
-      to: "/swift",
+      title: "technologies.html",
+      to: "/html",
     },
   },
   {
