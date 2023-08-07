@@ -17,7 +17,6 @@
 <script setup>
 import { useStore } from "@/store/store";
 const store = useStore();
-
 import uiHeader from "@/components/molecules/uiHeader.vue";
 import uiFooter from "@/components/molecules/uiFooter.vue";
 </script>
@@ -33,7 +32,6 @@ import uiFooter from "@/components/molecules/uiFooter.vue";
 .content
     flex: 1 0 auto
     margin: 0 auto
-
 .footer
     flex: 0 0 auto
 .container
@@ -50,7 +48,6 @@ import uiFooter from "@/components/molecules/uiFooter.vue";
     color: #ffffff
 .v-enter-active,.v-leave-active
   transition: opacity 0.15s ease-in-out
-
 .v-enter-from, .v-leave-to
   opacity: 0
 </style>

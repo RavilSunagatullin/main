@@ -53,7 +53,11 @@ import uiButton from "@/components/atoms/uiButton.vue";
 import uiInput from "@/components/atoms/uiInput.vue";
 
 const switchColor = ref(true);
-const switchLang = ref(true);
+const switchLang = ref();
+
+if (locale.value === "en") {
+  switchLang.value = ref(false);
+}
 
 watch(switchColor, () => {
   switchColor: {
@@ -68,6 +72,7 @@ watch(switchLang, () => {
     } else {
       locale.value = "en";
     }
+    localStorage.setItem("lang", locale.value);
   }
 });
 

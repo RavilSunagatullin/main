@@ -3,7 +3,6 @@ import { defineStore } from "pinia";
 export const useStore = defineStore("store", {
   state: () => ({
     lightTheme: true,
-    defaultLocalLang: "en",
   }),
   getters: {},
   actions: {

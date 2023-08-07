@@ -42,7 +42,11 @@ import uiSwitch from "@/components/atoms/uiSwitch.vue";
 import uiLink from "@/components/atoms/uiLink.vue";
 
 const switchColor = ref(true);
-const switchLang = ref(true);
+const switchLang = ref(false);
+
+if (locale.value === "en") {
+  switchLang.value = ref(false);
+}
 
 watch(switchColor, () => {
   switchColor: {
@@ -56,6 +60,7 @@ watch(switchLang, () => {
     } else {
       locale.value = "en";
     }
+    localStorage.setItem("lang", locale.value);
   }
 });
 
