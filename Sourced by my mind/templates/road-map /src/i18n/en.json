@@ -1,11 +1,30 @@
 {
   "back": "<== Back",
+  "Just_input": "Just input",
+  "road": "Road.map()",
   "guides": "Guides",
   "articles": "Articles",
   "slogan": "Simple service for learning programming",
   "chooseGuide": "Choose guide",
   "author": "Author",
   "about": "About us",
+  "article-why-us": {
+    "paragraph_1": "Road.map() is a service that allows you to quickly learn and find the necessary programming topics, and we also provide a brief description of them.",
+    "paragraph_2": "We do not teach programming, we only give the necessary vector for development, making it easier for a beginner.",
+    "paragraph_3": "Why we are better than other similar services:",
+    "paragraph_4": "Data feed structure,",
+    "paragraph_5": "Volume of various articles,",
+    "paragraph_6": "Convenient environment settings,",
+    "paragraph_7": "The absence of additional registrations and troubles.",
+    "paragraph_8": "This service is written in Vue js and is completely open source.",
+    "paragraph_9": "Why Vue? Vue is a progressive js framework, yet it takes an html first approach and is declarative. Vue is well suited for writing small startups and applications, while unlike svelte, it also feels good on medium-sized projects. As for large projects, corporate Angular and universal React are doing great there."
+  },
+  "greetings": {
+    "article-greeting": "Road.map(Articles)",
+    "article-greeting-helper": "This page is a collection of all our articles",
+    "guides-greeting": "Road.map(Guides)",
+    "guides-greeting-helper": "This page is a collection of all our guides"
+  },
   "technologies": {
     "dev-dir": "Develop direction",
     "technologies": "Technologies",
@@ -21,13 +40,17 @@
     "Swift": "Swift",
     "html": "Html",
     "js": "JavaScript",
+    "css": "Css",
     "react": "React",
     "angular": "Angular"
   },
-  "how-learning-faster": "How learning faster ?",
-  "what-is-mobile-develop": "What is Mobile develop ?",
-  "which-backend-framework-is-best": "Which Backend framework is best?",
-  "what-dev-ops-developer-doing": "What Dev ops developer doing ?",
+  "articles-titles": {
+    "about": "What can we offer ?",
+    "how-learning-faster": "How learning faster ?",
+    "what-is-mobile-develop": "What is Mobile develop ?",
+    "which-backend-framework-is-best": "Which Backend framework is best?",
+    "what-dev-ops-developer-doing": "What Dev ops developer doing ?"
+  },
   "frontend-page": {
     "article_1-title": "What is frontend?",
     "paragraph_1-1": "Front-end development is the development of visual and interactive elements of a website that users interact with directly. It's a combination of HTML, CSS and JavaScript, where HTML provides the structure, CSS the styling and layout, and JavaScript the dynamic behaviour and interactivity.",

@@ -22,7 +22,7 @@
         class="tab-inside"
       >
         <span class="title">{{ $t(`${el.title}`) }}</span>
-        <span v-for="descr of el.description">{{ $t(`${descr}`) }}</span>
+        <span v-for="descr of el.description" class="descr">{{ $t(`${descr}`) }}</span>
         <uiLink
           class="tab-link"
           v-if="el.haveButton === true"
@@ -57,7 +57,8 @@ const props = defineProps({
 </script>
 
 <style lang="sass" scoped>
-
+.descr
+  text-align: justify
 .tab
     padding: 30px
     max-width: 900px

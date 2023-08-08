@@ -34,7 +34,11 @@
       />
     </div>
     <div class="footer__left">
-      <uiInput label="In dev" placeholder="In dev" name="In dev" />
+      <uiInput
+        :label="$t('Just_input')"
+        :placeholder="$t('Just_input')"
+        name="Just input"
+      />
     </div>
   </footer>
 </template>

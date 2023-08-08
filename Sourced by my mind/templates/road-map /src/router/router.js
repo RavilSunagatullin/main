@@ -5,6 +5,8 @@ import main from "@/views/main.vue";
 import article from "@/views/article.vue";
 import guides from "@/views/guides.vue";
 
+import why_us from "@/views/articles/why-us.vue";
+
 import pageNotFound from "@/views/pageNotFound.vue";
 import frontEnd from "@/views/guides/frontend/frontend.vue";
 import base_frontend from "@/views/guides/frontend/base-frontend.vue";
@@ -34,6 +36,11 @@ const router = createRouter({
       path: "/article",
       name: "article",
       component: article,
+    },
+    {
+      path: "/about",
+      name: "why_us",
+      component: why_us,
     },
     {
       path: "/guides",

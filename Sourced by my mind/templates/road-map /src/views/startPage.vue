@@ -1,5 +1,5 @@
 <template>
-  <greeting link />
+  <greeting link title="road" description="slogan" button="chooseGuide" />
 </template>
 
 <script setup>

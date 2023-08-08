@@ -36,9 +36,9 @@ const data = {
   },
   article_3: {
     title: "frontend-page.article_3-title",
-    haveButton: true,
-    label: "frontend-page.article_3-label",
-    to: "/git",
+    // haveButton: true,
+    // label: "frontend-page.article_3-label",
+    // to: "/git",
     description: {
       paragraph_1: "frontend-page.paragraph_3-1",
       paragraph_2: "frontend-page.paragraph_3-2",
@@ -48,9 +48,9 @@ const data = {
   },
   article_4: {
     title: "frontend-page.article_4-title",
-    haveButton: true,
-    label: "frontend-page.article_4-label",
-    to: "/framewroks",
+    // haveButton: true,
+    // label: "frontend-page.article_4-label",
+    // to: "/framewroks",
     description: {
       paragraph_1: "frontend-page.paragraph_4-1",
       paragraph_2: "frontend-page.paragraph_4-2",
@@ -60,9 +60,9 @@ const data = {
   },
   article_5: {
     title: "frontend-page.article_5-title",
-    haveButton: true,
-    label: "frontend-page.article_5-label",
-    to: "/framewroks",
+    // haveButton: true,
+    // label: "frontend-page.article_5-label",
+    // to: "/other-tools",
     description: {
       paragraph_1: "frontend-page.paragraph_5-1",
       paragraph_2: "frontend-page.paragraph_5-2",
@@ -73,9 +73,9 @@ const data = {
   },
   article_6: {
     title: "frontend-page.article_6-title",
-    haveButton: true,
-    label: "frontend-page.article_6-label",
-    to: "/framewroks",
+    // haveButton: true,
+    // label: "frontend-page.article_6-label",
+    // to: "/tests",
     description: {
       paragraph_1: "frontend-page.paragraph_6-1",
       paragraph_2: "frontend-page.paragraph_6-2",
@@ -84,9 +84,9 @@ const data = {
   },
   article_7: {
     title: "frontend-page.article_7-title",
-    haveButton: true,
-    label: "frontend-page.article_7-label",
-    to: "/framewroks",
+    // haveButton: true,
+    // label: "frontend-page.article_7-label",
+    // to: "/froms web",
     description: {
       paragraph_1: "frontend-page.paragraph_7-1",
       paragraph_2: "frontend-page.paragraph_7-2",

@@ -1,11 +1,28 @@
 {
   "back": "<== Назад",
+  "Just_input": "Просто input",
+  "road": "Road.map()",
   "guides": "Гайды",
   "articles": "Статьи",
   "slogan": "Простой сервис для изучения програмирования",
   "chooseGuide": "Выбрать гайд",
   "author": "Автор",
   "about": "О проекте",
+  "article-why-us": {
+    "title": "О нашем сервисе",
+    "title-helper": "Небольшая статья про нас.",
+    "paragraph_1": "Road.map() это сервис позволяющий быстро узнать и найти нужные темы по программированию , а также мы предоставляем  их  краткое описание.",
+    "paragraph_2": "Мы не учим программированию, мы лишь даем необходимый вектор для развития облегчая путь новичка.",
+    "paragraph_3": "Чем мы лучше других подобных сервисов: cтруктурой подачи данных,  объемом различных статей, удобством настройки среды, отсутствием дополнительных регистраций и заморочек.",
+    "paragraph_4": "Данный сервис написан на Vue js и полностью open source. ",
+    "paragraph_5": "Почему Vue? Vue прогрессивный js фреймворк, при этом он  использует подход html first и декларативен . Vue хорошо подходит для написания небольших стартапов и приложений, при этом в отличии от svelte чувствует себя хорошо и на средних по размерам проектам. Что касается больших проектов там себя отлично проявляют корпоративный Angular и универсальный React."
+  },
+  "greetings": {
+    "article-greeting": "Road.map(Статьи)",
+    "article-greeting-helper": "Эта страница сборник всех наших статей",
+    "guides-greeting": "Road.map(Гайды)",
+    "guides-greeting-helper": "Эта страница сборник всех наших гайдов"
+  },
   "technologies": {
     "dev-dir": "Направление разработки",
     "technologies": "Технологии",
@@ -21,13 +38,17 @@
     "Swift": "Swift",
     "html": "Html",
     "js": "JavaScript",
+    "css": "Css",
     "react": "React",
     "angular": "Angular"
   },
-  "how-learning-faster": "Как учиться быстрее ?",
-  "what-is-mobile-develop": "Что такое мобильная разработка ?",
-  "which-backend-framework-is-best": "Какой backend фреймворк лучший ?",
-  "what-dev-ops-developer-doing": "Чем занимаються dev ops разработчики ?",
+  "articles-titles": {
+    "about": "Что такое Road.map() ?",
+    "how-learning-faster": "How learning faster ?",
+    "what-is-mobile-develop": "What is Mobile develop ?",
+    "which-backend-framework-is-best": "Which Backend framework is best?",
+    "what-dev-ops-developer-doing": "What Dev ops developer doing ?"
+  },
   "frontend-page": {
     "article_1-title": "Что такое frontend?",
     "paragraph_1-1": "Фронтенд-разработка — это разработка визуальных и интерактивных элементов веб-сайта, с которыми пользователи взаимодействуют напрямую. Это комбинация HTML, CSS и JavaScript, где HTML обеспечивает структуру, CSS — стиль и макет, а JavaScript — динамическое поведение и интерактивность.",

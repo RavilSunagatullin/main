@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper-main">
-    <greeting />
+    <greeting title="road" description="slogan" />
     <elements :title="$t('technologies.dev-dir')" :elements="arrayEl[0]" />
     <elements
       :title="'technologies.technologies'"
@@ -15,8 +15,6 @@
 import greeting from "@/components/molecules/greeting.vue";
 import elements from "@/components/molecules/elements.vue";
 
-import { watch, ref } from "vue";
-
 import { useI18n } from "vue-i18n";
 const { t, locale } = useI18n({ useScope: "global" });
 
@@ -29,64 +27,56 @@ const arrayEl = [
       title: "technologies.frontend",
       to: "/frontend",
     },
-    backend: {
-      title: "technologies.backend",
-      to: "/backend",
-    },
-    mobileAndroid: {
-      title: "technologies.kotlin",
-      to: "/kotlin",
-    },
-    mobileSwift: {
-      title: "technologies.swift",
-      to: "/swift",
-    },
+    // backend: {
+    //   title: "technologies.backend",
+    //   to: "/backend",
+    // },
+    // mobileAndroid: {
+    //   title: "technologies.kotlin",
+    //   to: "/kotlin",
+    // },
+    // mobileSwift: {
+    //   title: "technologies.swift",
+    //   to: "/swift",
+    // },
   },
   {
-    vue: {
-      title: "technologies.vue-js",
+    Html: {
+      title: "technologies.html",
       to: "/vue-js",
     },
-    laravel: {
-      title: "technologies.laravel",
-      to: "/laravel",
-    },
-    kotlin: {
+    js: {
       title: "technologies.js",
       to: "/js",
     },
-    swift: {
-      title: "technologies.html",
-      to: "/html",
+    Css: {
+      title: "technologies.css",
+      to: "/css",
     },
+    // laravel: {
+    //   title: "technologies.laravel",
+    //   to: "/laravel",
+    // },
   },
   {
     article_1: {
-      title: "how-learning-faster",
-      to: "/How learning faster ?",
+      title: "articles-titles.about",
+      to: "/about",
     },
-    article_2: {
-      title: "what-is-mobile-develop",
-      to: "/What is Mobile develop ?",
-    },
-    article_3: {
-      title: "which-backend-framework-is-best",
-      to: "/Which Backend framework is best?",
-    },
-    article_4: {
-      title: "what-dev-ops-developer-doing",
-      to: "/What Dev ops developer doing ?",
-    },
+    // article_2: {
+    //   title: "what-is-mobile-develop",
+    //   to: "/What is Mobile develop ?",
+    // },
+    // article_3: {
+    //   title: "which-backend-framework-is-best",
+    //   to: "/Which Backend framework is best?",
+    // },
+    // article_4: {
+    //   title: "what-dev-ops-developer-doing",
+    //   to: "/What Dev ops developer doing ?",
+    // },
   },
 ];
 </script>
 
-<style lang="sass" scoped>
-.wrapper-main
-    display: flex
-    flex-direction: column
-    gap: 75px
-    margin: 20px 0
-    @media (max-width:500px)
-        gap: 25px
-</style>
+<style lang="sass" scoped></style>

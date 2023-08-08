@@ -1,9 +1,9 @@
 <template>
   <div class="greetings">
-    <h1 class="heading-1">Road.map()</h1>
-    <h3 class="heading-3">{{ $t("slogan") }}</h3>
+    <h1 class="heading-1">{{ $t(`${title}`) }}</h1>
+    <h3 class="heading-3">{{ $t(`${description}`) }}</h3>
     <div class="wrapper-greeting" v-show="link">
-      <uiLink to="/main" :label="$t('chooseGuide')" />
+      <uiLink to="/main" :label="$t(`${button}`)" />
     </div>
   </div>
 </template>
@@ -18,6 +18,18 @@ const props = defineProps({
   link: {
     type: Boolean,
     default: false,
+  },
+  title: {
+    type: String,
+    required: true,
+  },
+  description: {
+    type: String,
+    required: false,
+  },
+  button: {
+    type: String,
+    required: false,
   },
 });
 </script>

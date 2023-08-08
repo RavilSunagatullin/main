@@ -22,30 +22,7 @@ import uiFooter from "@/components/molecules/uiFooter.vue";
 </script>
 
 <style lang="sass">
-.wrapper
-    display: flex
-    flex-direction: column
-    justify-content: center
-    margin: 0 auto
-    min-height: 100vh
-    height: 100%
-.content
-    flex: 1 0 auto
-    margin: 0 auto
-.footer
-    flex: 0 0 auto
-.container
-  max-width: 1110px
-  margin: 0 auto
-  padding-left: 15px
-  padding-right: 15px
-.bg
-  &__white
-    background-color: #ffffff
-    color: #333333
-  &__black
-    background-color: #333333
-    color: #ffffff
+
 .v-enter-active,.v-leave-active
   transition: opacity 0.15s ease-in-out
 .v-enter-from, .v-leave-to

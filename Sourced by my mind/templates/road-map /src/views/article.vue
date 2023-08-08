@@ -1,5 +1,9 @@
 <template>
-  <div>
+  <div class="wrapper-main">
+    <greeting
+      title="greetings.article-greeting"
+      description="greetings.article-greeting-helper"
+    />
     <elements
       :title="$t('articles')"
       :elements="arrayEl[0]"
@@ -11,6 +15,7 @@
 
 <script setup>
 import elements from "@/components/molecules/elements.vue";
+import greeting from "@/components/molecules/greeting.vue";
 
 import { useI18n } from "vue-i18n";
 const { t } = useI18n({ useScope: "global" });
@@ -18,20 +23,8 @@ const { t } = useI18n({ useScope: "global" });
 const arrayEl = [
   {
     article_1: {
-      title: "how-learning-faster",
-      to: "/How learning faster ?",
-    },
-    article_2: {
-      title: "what-is-mobile-develop",
-      to: "/What is Mobile develop ?",
-    },
-    article_3: {
-      title: "which-backend-framework-is-best",
-      to: "/Which Backend framework is best?",
-    },
-    article_4: {
-      title: "what-dev-ops-developer-doing",
-      to: "/What Dev ops developer doing ?",
+      title: "articles-titles.about",
+      to: "/about",
     },
   },
 ];

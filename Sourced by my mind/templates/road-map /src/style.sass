@@ -94,3 +94,36 @@ img
 @font-face 
     font-family: 'JetBrains Mono'
     src: url('/fonts/JetBrainsMono-Regular.woff2') 
+
+.wrapper-main
+    max-width: 1080px
+    display: flex
+    flex-direction: column
+    gap: 75px
+    margin: 20px 0
+    @media (max-width:500px)
+        gap: 25px
+.wrapper
+    display: flex
+    flex-direction: column
+    justify-content: center
+    margin: 0 auto
+    min-height: 100vh
+    height: 100%
+.content
+    flex: 1 0 auto
+    margin: 0 auto
+.footer
+    flex: 0 0 auto
+.container
+  max-width: 1110px
+  margin: 0 auto
+  padding-left: 15px
+  padding-right: 15px
+.bg
+  &__white
+    background-color: #ffffff
+    color: #333333
+  &__black
+    background-color: #333333
+    color: #ffffff
