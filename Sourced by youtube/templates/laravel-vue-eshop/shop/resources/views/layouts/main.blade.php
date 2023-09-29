@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="{{ asset('adminLTE/dist/css/adminlte.min.css') }}">
     <!-- overlayScrollbars -->
     <link rel="stylesheet" href="{{ asset('adminLTE/plugins/overlayScrollbars/css/OverlayScrollbars.min.css') }}">
+      <!-- Select2 -->
+    <link rel="stylesheet" href="{{asset('adminLTE/plugins/select2/css/select2.min.css')}}">
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
@@ -151,7 +153,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="pages/gallery.html" class="nav-link">
+                            <a href="{{route('product.index')}}" class="nav-link">
                                 <i class="nav-icon fas fa-tshirt"></i>
                                 <p>
                                     Products
@@ -223,12 +225,19 @@
     <script>
         $.widget.bridge('uibutton', $.ui.button)
     </script>
+    <!-- Select2 -->
+    <script src="{{asset('adminLTE/plugins/select2/js/select2.full.min.js')}}"></script>
     <!-- Bootstrap 4 -->
     <script src="{{ asset('adminLTE/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
     <!-- overlayScrollbars -->
     <script src="{{ asset('adminLTE/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js') }}"></script>
     <!-- AdminLTE App -->
     <script src="{{ asset('adminLTE/dist/js/adminlte.js') }}"></script>
+    <script>
+        $('.tags').select2()
+        $('.colors').select2()
+    </script>
+
 </body>
 
 </html>

@@ -67,7 +67,7 @@
                                     </tr>
                                     <tr>
                                         <td>Gender</td>
-                                        <td>{{$user->gender}}</td>
+                                        <td>{{$user->genderTitle}}</td>
                                     </tr>
                                     <tr>
                                         <td>Address</td>

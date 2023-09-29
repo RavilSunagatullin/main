@@ -31,15 +31,6 @@
                     <input type="text" value="{{$user->name ?? old('name')}}" name="name" class="form-control" placeholder="name">
                 </div>
                 <div class="form-group">
-                    <input type="email"  value="{{$user->email ?? old('email')}}" name="email" class="form-control" placeholder="email">
-                </div>
-                <div class="form-group">
-                    <input type="text"  value="{{$user->password ?? old('password')}}" name="password" class="form-control" placeholder="password">
-                </div>
-                <div class="form-group">
-                    <input type="password"  value="{{ old('password_confirmation')}}" name="password_confirmation"  class="form-control" placeholder="password confirmation">
-                </div>
-                <div class="form-group">
                     <input type="text" value="{{$user->surname ?? old('surname')}}" name="surname"  class="form-control" placeholder="surname">
                 </div>
                 <div class="form-group">
